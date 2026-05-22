@@ -43,6 +43,12 @@ export default function SignupPage() {
       setError('Password must be at least 8 characters long.');
       return;
     }
+    const hasLetter = /[a-zA-Z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    if (!hasLetter || !hasNumber) {
+      setError('Password must contain both letters (A-Z) and numbers (0-9).');
+      return;
+    }
     
     setError('');
     
