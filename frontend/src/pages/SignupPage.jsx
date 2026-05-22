@@ -29,22 +29,6 @@ export default function SignupPage() {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  // Handle 30 seconds countdown timer for OTP entry
-  useEffect(() => {
-    if (view !== 'otp_verification') return;
-    if (timeLeft <= 0) {
-      setIsOtpExpired(true);
-      setError('Verification time expired. Please request a new OTP.');
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setTimeLeft(prev => prev - 1);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [view, timeLeft]);
-
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
@@ -80,95 +64,33 @@ export default function SignupPage() {
       return;
     }
 
-    // Generate secure 6-digit OTP
-    const generatedOtp = String(Math.floor(100000 + Math.random() * 900000));
-    setOtpCode(generatedOtp);
-
-    // SECURITY: Log the OTP securely to the browser console for staging / testing
-    console.log(
-      '%c🔑 [SECURITY] Register OTP sent to ' + email + ' is: ' + generatedOtp, 
-      'background: #0f172a; color: #00f2fe; padding: 8px 16px; border-radius: 8px; font-weight: bold; font-size: 14px; border: 1.5px solid rgba(0, 242, 254, 0.35);'
-    );
-
-    // Trigger backend real Nodemailer mail dispatch
-    const triggerBackendEmail = async () => {
-      try {
-        const API_BASE = 'http://localhost:5001/api';
-        await fetch(`${API_BASE}/send-otp`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, otp: generatedOtp })
-        });
-      } catch (err) {
-        console.error('Failed to trigger backend OTP email dispatch:', err);
-      }
-    };
-
-    triggerBackendEmail();
-
-    // Trigger the 10-second OTP generation display
+    // Trigger the 2-second premium registration display
     setIsLoading(true);
-    setOtpLoadingMessage('Connecting to secure registration node...');
-
-    let counter = 10;
-    const interval = setInterval(() => {
-      counter -= 1;
-      if (counter === 7) {
-        setOtpLoadingMessage('Generating secure 6-digit One-Time Password...');
-      } else if (counter === 4) {
-        setOtpLoadingMessage(`Dispatching secure verification email to ${email}...`);
-      } else if (counter <= 0) {
-        clearInterval(interval);
-        setIsLoading(false);
-        setOtpLoadingMessage('');
-        
-        setTimeLeft(30);
-        setIsOtpExpired(false);
-        setEnteredOtp('');
-        setError('');
-        setView('otp_verification');
-      }
-    }, 1000);
-  };
-
-  const handleVerifyOtp = (e) => {
-    e.preventDefault();
-    if (isOtpExpired || timeLeft <= 0) {
-      setError('Verification time expired. Please request a new OTP.');
-      return;
-    }
-    if (!enteredOtp) {
-      setError('Please enter the verification code.');
-      return;
-    }
-    if (enteredOtp !== otpCode) {
-      setError('Invalid OTP code. Please try again.');
-      return;
-    }
-
-    setError('');
-    setIsLoading(true);
+    setOtpLoadingMessage('Provisioning secure fitness workspace...');
 
     setTimeout(() => {
-      setIsLoading(false);
-      setSuccess(true);
-
-      // Save user to registered users database
-      const registeredUsersList = JSON.parse(localStorage.getItem('mmp_registered_users') || '[]');
-      registeredUsersList.push({ name, email, password });
-      localStorage.setItem('mmp_registered_users', JSON.stringify(registeredUsersList));
+      setOtpLoadingMessage('Analyzing macro baseline configurations...');
       
-      // Save authenticated flag in localStorage
-      localStorage.setItem('mmp_authenticated', 'true');
-      localStorage.setItem('mmp_user_name', name);
-      localStorage.setItem('mmp_user_email', email);
-
       setTimeout(() => {
-        navigate('/dashboard', { replace: true });
-      }, 1200);
-    }, 1200);
+        setIsLoading(false);
+        setOtpLoadingMessage('');
+        setSuccess(true);
+
+        // Save user to registered users database
+        const registeredUsersList = JSON.parse(localStorage.getItem('mmp_registered_users') || '[]');
+        registeredUsersList.push({ name, email, password });
+        localStorage.setItem('mmp_registered_users', JSON.stringify(registeredUsersList));
+        
+        // Save authenticated flag in localStorage
+        localStorage.setItem('mmp_authenticated', 'true');
+        localStorage.setItem('mmp_user_name', name);
+        localStorage.setItem('mmp_user_email', email);
+
+        setTimeout(() => {
+          navigate('/dashboard', { replace: true });
+        }, 1200);
+      }, 1000);
+    }, 1000);
   };
 
   return (
@@ -289,14 +211,14 @@ export default function SignupPage() {
               marginBottom: '20px'
             }}></div>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--text-primary)', marginBottom: '8px' }}>
-              Sending Secure OTP
+              Creating Secure Account
             </h3>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', minHeight: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {otpLoadingMessage}
             </p>
             <div style={{ marginTop: '16px', background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.2)', padding: '6px 12px', borderRadius: '20px', display: 'inline-flex', gap: '8px', alignItems: 'center' }}>
               <span className="pulsing-dot" style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-cyan)' }}></span>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-cyan)' }}>ESTIMATED TIME: 10S</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-cyan)' }}>ESTIMATED TIME: 2S</span>
             </div>
           </div>
         )}
@@ -485,170 +407,7 @@ export default function SignupPage() {
             </motion.div>
           )}
 
-          {/* VIEW 2: SECURE OTP VERIFICATION */}
-          {view === 'otp_verification' && (
-            <motion.div
-              key="otp-verification-view"
-              initial={{ opacity: 0, x: 15 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -15 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-                <div 
-                  style={{ 
-                    width: '48px', 
-                    height: '48px', 
-                    borderRadius: '50%', 
-                    background: 'rgba(0, 242, 254, 0.1)', 
-                    color: 'var(--accent-cyan)', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center',
-                    margin: '0 auto 16px auto'
-                  }}
-                >
-                  <Lock size={22} className="neon-text-cyan" />
-                </div>
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--text-primary)', marginBottom: '6px' }}>
-                  Two-Step Verification
-                </h2>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', maxWidth: '320px', margin: '0 auto' }}>
-                  A secure 6-digit One-Time Password (OTP) has been sent to your registered email:
-                </p>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 'bold', marginTop: '4px' }}>
-                  {email}
-                </p>
-              </div>
 
-              {error && (
-                <div 
-                  style={{ 
-                    marginBottom: '20px', 
-                    padding: '12px 16px', 
-                    borderRadius: '12px', 
-                    background: 'rgba(239, 68, 68, 0.1)', 
-                    border: '1px solid rgba(239, 68, 68, 0.2)', 
-                    color: 'var(--accent-red)', 
-                    fontSize: '0.8rem', 
-                    fontWeight: 'bold'
-                  }}
-                >
-                  {error}
-                </div>
-              )}
-
-              {success && (
-                <div 
-                  style={{ 
-                    marginBottom: '20px', 
-                    padding: '12px 16px', 
-                    borderRadius: '12px', 
-                    background: 'rgba(16, 185, 129, 0.1)', 
-                    border: '1px solid rgba(16, 185, 129, 0.2)', 
-                    color: 'var(--accent-green)', 
-                    fontSize: '0.8rem', 
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px'
-                  }}
-                >
-                  <CheckCircle2 size={16} className="text-green-500" />
-                  Verification successful! Creating account...
-                </div>
-              )}
-
-              <form onSubmit={handleVerifyOtp} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                
-                {/* OTP input */}
-                <div className="form-group" style={{ marginBottom: 0 }}>
-                  <label className="form-label" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                    Verification Code
-                  </label>
-                  <div style={{ position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
-                      <KeyRound size={18} />
-                    </span>
-                    <input 
-                      type="text" 
-                      maxLength={6}
-                      placeholder="Enter 6-digit code" 
-                      value={enteredOtp}
-                      onChange={(e) => setEnteredOtp(e.target.value.replace(/\D/g, ''))}
-                      disabled={isLoading || success || isOtpExpired}
-                      className="form-input"
-                      style={{ paddingLeft: '48px', letterSpacing: '0.12em', fontWeight: 'bold' }}
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Countdown Timer Indicator & Resend */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', marginBottom: '4px' }}>
-                  <span style={{ fontSize: '0.8rem', color: isOtpExpired ? 'var(--accent-red)' : 'var(--text-secondary)', fontWeight: 600 }}>
-                    {isOtpExpired ? 'OTP Expired' : `Expires in: ${timeLeft}s`}
-                  </span>
-                  {isOtpExpired && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        // Resubmit to trigger fresh 10s OTP generation
-                        handleSignupSubmit();
-                      }}
-                      className="neon-text-cyan"
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        color: 'var(--accent-indigo)',
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        cursor: 'pointer',
-                        padding: 0,
-                        textDecoration: 'underline'
-                      }}
-                    >
-                      Resend OTP (10s mail)
-                    </button>
-                  )}
-                </div>
-
-                {/* Submit & Back buttons */}
-                <div style={{ display: 'flex', gap: '12px', marginTop: '8px' }}>
-                  <button 
-                    type="button" 
-                    onClick={() => { setView('signup'); setError(''); }}
-                    className="btn-secondary"
-                    style={{ flex: 1, padding: '12px', justifyContent: 'center' }}
-                  >
-                    Back
-                  </button>
-                  <button 
-                    type="submit"
-                    disabled={isLoading || success}
-                    className="btn-primary"
-                    style={{ flex: 2, justifyContent: 'center', padding: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}
-                  >
-                    {isLoading ? (
-                      <span 
-                        style={{ 
-                          width: '18px', 
-                          height: '18px', 
-                          border: '2px solid rgba(255,255,255,0.3)', 
-                          borderTopColor: '#ffffff', 
-                          borderRadius: '50%', 
-                          display: 'inline-block',
-                          animation: 'spin 1s linear infinite'
-                        }}
-                      ></span>
-                    ) : (
-                      'Verify & Register'
-                    )}
-                  </button>
-                </div>
-              </form>
-            </motion.div>
-          )}
         </AnimatePresence>
       </motion.div>
 

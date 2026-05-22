@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const UserProfileSchema = new mongoose.Schema({
-  age: { type: Number, default: 28 },
-  weight: { type: Number, default: 70 },
-  height: { type: Number, default: 175 },
+  age: { type: Number, default: null },
+  weight: { type: Number, default: null },
+  height: { type: Number, default: null },
   gender: { type: String, default: 'male' },
   activityLevel: { type: String, default: 'moderate' },
   goal: { type: String, default: 'maintain' },

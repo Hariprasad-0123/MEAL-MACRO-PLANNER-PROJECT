@@ -198,8 +198,8 @@ export default function ProfileOnboarding({ profile, saveProfile, showToast }) {
           </div>
 
           <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid var(--border-glass)', display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
-            <button onClick={handleReset} className="btn-secondary">Reset</button>
-            <button onClick={handleUpdate} className="btn-primary">Update Profile</button>
+            <button type="button" onClick={(e) => { e.preventDefault(); handleReset(); }} className="btn-secondary">Reset</button>
+            <button type="button" onClick={(e) => { e.preventDefault(); handleUpdate(); }} className="btn-primary">Update Profile</button>
           </div>
         </div>
 

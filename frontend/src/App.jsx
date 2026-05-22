@@ -16,9 +16,10 @@ import Analytics from './pages/Analytics.jsx';
 import AICoach from './pages/AICoach.jsx';
 import AdminPanel from './pages/AdminPanel.jsx';
 import SavedSearches from './pages/SavedSearches.jsx';
+import ProfileSummary from './pages/ProfileSummary.jsx';
 import { generateMealPlanForDay, generateGroceryList } from './utils/plannerUtils.js';
 
-const API_BASE = 'http://localhost:5001/api';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5001/api';
 
 // Helper to calculate suggested calorie cycling multipliers based on physical profile (BMI & Age)
 const getAutoCyclingMultipliers = (age, weight, height) => {
@@ -35,21 +36,7 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   // Navigation & UI States
-  const [activeTab, setActiveTab] = useState(() => localStorage.getItem('mmp_active_tab') || 'dashboard');
-
-  useEffect(() => {
-    localStorage.setItem('mmp_active_tab', activeTab);
-  }, [activeTab]);
-
-  // Synchronize activeTab state when routing dynamically back into /dashboard
-  useEffect(() => {
-    if (location.pathname === '/dashboard') {
-      const savedTab = localStorage.getItem('mmp_active_tab');
-      if (savedTab && savedTab !== activeTab) {
-        setActiveTab(savedTab);
-      }
-    }
-  }, [location, activeTab]);
+  const [activeTab, setActiveTab] = useState('dashboard');
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -63,9 +50,9 @@ export default function App() {
   const [scanResult, setScanResult] = useState(null);
 
   // Physical profile defaults for initialization
-  const defaultAge = 28;
-  const defaultWeight = 70;
-  const defaultHeight = 175;
+  const defaultAge = '';
+  const defaultWeight = '';
+  const defaultHeight = '';
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -94,7 +81,9 @@ export default function App() {
       customMacros: null,
       isPremium: false,
       calorieCycling: {
-        workoutDays: ['Monday', 'Wednesday', 'Friday']
+        workoutDays: ['Monday', 'Wednesday', 'Friday'],
+        workoutCalorieMultiplier: '',
+        restCalorieMultiplier: ''
       }
     };
   });
@@ -175,6 +164,8 @@ export default function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
   const [premiumCard, setPremiumCard] = useState({ cardNumber: '', name: '', expiry: '', cvv: '' });
   const [isPaying, setIsPaying] = useState(false);
+  const [isEditingEmail, setIsEditingEmail] = useState(false);
+  const [newEmailInput, setNewEmailInput] = useState('');
   
   // Chatbot states
   const [chatInput, setChatInput] = useState('');
@@ -205,8 +196,23 @@ export default function App() {
       const res = await fetch(`${API_BASE}/profile`);
       if (res.ok) {
         const data = await res.json();
-        setProfile(data);
-        localStorage.setItem('mmp_profile', JSON.stringify(data));
+        const normalized = {
+          ...data,
+          age: data.age === null || data.age === 0 ? '' : data.age,
+          weight: data.weight === null || data.weight === 0 ? '' : data.weight,
+          height: data.height === null || data.height === 0 ? '' : data.height,
+          calorieCycling: data.calorieCycling ? {
+            ...data.calorieCycling,
+            workoutCalorieMultiplier: data.calorieCycling.workoutCalorieMultiplier === null ? '' : data.calorieCycling.workoutCalorieMultiplier,
+            restCalorieMultiplier: data.calorieCycling.restCalorieMultiplier === null ? '' : data.calorieCycling.restCalorieMultiplier,
+          } : {
+            workoutDays: ['Monday', 'Wednesday', 'Friday'],
+            workoutCalorieMultiplier: '',
+            restCalorieMultiplier: ''
+          }
+        };
+        setProfile(normalized);
+        localStorage.setItem('mmp_profile', JSON.stringify(normalized));
       }
     } catch {
       console.warn('Backend offline, using local storage/fallback for Profile');
@@ -225,13 +231,27 @@ export default function App() {
         body: JSON.stringify(updatedProfile)
       });
       if (res.ok) {
-        showToast('Profile updated successfully!');
-        setActiveTab('dashboard');
+        showToast('Profile updated successfully! Re-authenticating...', 'success');
+        localStorage.removeItem('mmp_authenticated');
+        setTimeout(() => {
+          navigate('/login');
+        }, 1200);
       }
     } catch {
-      showToast('Profile saved locally (Offline mode)');
-      setActiveTab('dashboard');
+      showToast('Profile saved locally! Re-authenticating...', 'success');
+      localStorage.removeItem('mmp_authenticated');
+      setTimeout(() => {
+        navigate('/login');
+      }, 1200);
     }
+  };
+
+  const handleEditProfileRedirect = () => {
+    localStorage.removeItem('mmp_authenticated');
+    showToast('Redirecting to secure login to edit profile...', 'info');
+    setIsUserMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    navigate('/login');
   };
 
   async function fetchRecipes() {
@@ -1186,13 +1206,115 @@ export default function App() {
                     }}>
                       {firstLetter}
                     </div>
-                    <div style={{ overflow: 'hidden' }}>
+                    <div style={{ flex: 1, overflow: 'hidden' }}>
                       <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {displayName}
                       </h4>
-                      <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {email || 'No email registered'}
-                      </p>
+                      {!isEditingEmail ? (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}>
+                          <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            {email || 'No email registered'}
+                          </p>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setNewEmailInput(email);
+                              setIsEditingEmail(true);
+                            }}
+                            style={{
+                              background: 'none',
+                              border: 'none',
+                              color: 'var(--accent-indigo)',
+                              padding: 0,
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center'
+                            }}
+                            title="Change Email Address"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                          </button>
+                        </div>
+                      ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '4px' }}>
+                          <input 
+                            type="email" 
+                            value={newEmailInput} 
+                            onChange={(e) => setNewEmailInput(e.target.value)} 
+                            style={{
+                              fontSize: '0.75rem',
+                              padding: '4px 8px',
+                              borderRadius: '6px',
+                              border: '1px solid var(--border-glass)',
+                              background: 'var(--bg-input)',
+                              color: 'var(--text-primary)',
+                              width: '100%',
+                              outline: 'none'
+                            }}
+                            placeholder="New email address"
+                            required
+                          />
+                          <div style={{ display: 'flex', gap: '6px' }}>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                if (!newEmailInput || !newEmailInput.includes('@')) {
+                                  showToast('Please enter a valid email address.', 'warning');
+                                  return;
+                                }
+                                const currentEmail = localStorage.getItem('mmp_user_email') || '';
+                                const registered = JSON.parse(localStorage.getItem('mmp_registered_users') || '[]');
+                                const index = registered.findIndex(u => u.email.toLowerCase() === currentEmail.toLowerCase());
+                                if (index !== -1) {
+                                  registered[index].email = newEmailInput.trim();
+                                  localStorage.setItem('mmp_registered_users', JSON.stringify(registered));
+                                }
+                                localStorage.setItem('mmp_user_email', newEmailInput.trim());
+                                localStorage.removeItem('mmp_authenticated');
+                                setIsUserMenuOpen(false);
+                                setIsEditingEmail(false);
+                                showToast('Email updated successfully! Redirecting to login...', 'success');
+                                setTimeout(() => {
+                                  navigate('/login');
+                                }, 1000);
+                              }}
+                              style={{
+                                fontSize: '0.7rem',
+                                padding: '3px 8px',
+                                borderRadius: '4px',
+                                border: 'none',
+                                background: 'var(--accent-indigo)',
+                                color: '#ffffff',
+                                cursor: 'pointer',
+                                fontWeight: 700
+                              }}
+                            >
+                              Save & Logout
+                            </button>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setIsEditingEmail(false);
+                              }}
+                              style={{
+                                fontSize: '0.7rem',
+                                padding: '3px 8px',
+                                borderRadius: '4px',
+                                border: '1px solid var(--border-glass)',
+                                background: 'transparent',
+                                color: 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                fontWeight: 600
+                              }}
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -1248,9 +1370,28 @@ export default function App() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     <button
                       onClick={() => {
-                        setActiveTab('profile');
+                        setActiveTab('profile-summary');
                         setIsUserMenuOpen(false);
                       }}
+                      className="sidebar-item"
+                      style={{
+                        padding: '8px 12px',
+                        fontSize: '0.8rem',
+                        borderRadius: '8px',
+                        width: '100%',
+                        background: activeTab === 'profile-summary' ? 'rgba(99, 102, 241, 0.08)' : 'transparent',
+                        border: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        cursor: 'pointer',
+                        color: 'var(--text-secondary)'
+                      }}
+                    >
+                      <Sparkles size={14} style={{ color: 'var(--accent-indigo)' }} /> My Profile Summary
+                    </button>
+                    <button
+                      onClick={handleEditProfileRedirect}
                       className="sidebar-item"
                       style={{
                         padding: '8px 12px',
@@ -1383,7 +1524,7 @@ export default function App() {
             <a onClick={() => setActiveTab('analytics')} className={`sidebar-item ${activeTab === 'analytics' ? 'active' : ''}`}>
               <BarChart2 size={20} /> Analytics
             </a>
-            <a onClick={() => setActiveTab('profile')} className={`sidebar-item ${activeTab === 'profile' ? 'active' : ''}`}>
+            <a onClick={handleEditProfileRedirect} className={`sidebar-item ${activeTab === 'profile' ? 'active' : ''}`}>
               <User size={20} /> Onboarding & Goals
             </a>
             <a onClick={() => setActiveTab('savedSearches')} className={`sidebar-item ${activeTab === 'savedSearches' ? 'active' : ''}`}>
@@ -1502,7 +1643,7 @@ export default function App() {
             <a onClick={() => { setActiveTab('mealplan'); setIsMobileMenuOpen(false); }} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--text-primary)', display: 'block' }}>Weekly Planner</a>
             <a onClick={() => { setActiveTab('recipes'); setIsMobileMenuOpen(false); }} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--text-primary)', display: 'block' }}>Recipe Library</a>
             <a onClick={() => { setActiveTab('analytics'); setIsMobileMenuOpen(false); }} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--text-primary)', display: 'block' }}>Analytics</a>
-            <a onClick={() => { setActiveTab('profile'); setIsMobileMenuOpen(false); }} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--text-primary)', display: 'block' }}>Onboarding & Goals</a>
+            <a onClick={handleEditProfileRedirect} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--text-primary)', display: 'block' }}>Onboarding & Goals</a>
             {isAdminMode && (
               <a onClick={() => { setActiveTab('admin'); setIsMobileMenuOpen(false); }} style={{ fontSize: '1.25rem', padding: '12px 0', borderBottom: '1px solid var(--border-glass)', color: 'var(--accent-purple)', display: 'block' }}>Admin Panel</a>
             )}
@@ -1617,6 +1758,11 @@ export default function App() {
           <ProfileOnboarding profile={profile} saveProfile={saveProfile} showToast={showToast} />
         )}
 
+        {/* --- VIEW: PROFILE SUMMARY OVERVIEW --- */}
+        {activeTab === 'profile-summary' && (
+          <ProfileSummary profile={profile} targets={targets} setActiveTab={setActiveTab} onEditProfile={handleEditProfileRedirect} />
+        )}
+
         {/* --- VIEW: ADMIN PANEL --- */}
         {activeTab === 'admin' && isAdminMode && (
            <AdminPanel
@@ -1665,7 +1811,7 @@ export default function App() {
         <a onClick={() => setActiveTab('analytics')} className={`mobile-nav-item ${activeTab === 'analytics' ? 'active' : ''}`}>
           <BarChart2 size={20} /> Charts
         </a>
-        <a onClick={() => setActiveTab('profile')} className={`mobile-nav-item ${activeTab === 'profile' ? 'active' : ''}`}>
+        <a onClick={handleEditProfileRedirect} className={`mobile-nav-item ${activeTab === 'profile' ? 'active' : ''}`}>
           <User size={20} /> Goal
         </a>
       </nav>

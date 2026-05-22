@@ -25,7 +25,6 @@ const plannerRouter = require('./routes/planner');
 const barcodeRouter = require('./routes/barcode');
 const premiumRouter = require('./routes/premium');
 const searchHistoryRouter = require('./routes/searchHistory');
-const otpRouter = require('./routes/otp');
 
 // Mount Router Endpoints
 app.use('/api/profile', profileRouter);
@@ -33,7 +32,6 @@ app.use('/api/recipes', recipesRouter);
 app.use('/api/barcode', barcodeRouter);
 app.use('/api/premium', premiumRouter);
 app.use('/api/search-history', searchHistoryRouter);
-app.use('/api', otpRouter);
 
 // Bind combined endpoints (logs & weight to same router or split mounting)
 app.use('/api', logsRouter);        // /api/logs/:date and /api/weight
