@@ -1,0 +1,1075 @@
+[
+  {
+    "id": "recipe_1",
+    "name": "Protein Oatmeal",
+    "category": "breakfast",
+    "calories": 350,
+    "protein": 25,
+    "carbs": 45,
+    "fat": 8,
+    "diet": "vegan",
+    "allergens": ["gluten"],
+    "ingredients": [
+      { "name": "Rolled Oats", "quantity": "60g" },
+      { "name": "Vegan Protein Powder", "quantity": "30g" },
+      { "name": "Almond Milk", "quantity": "200ml" },
+      { "name": "Chia Seeds", "quantity": "10g" }
+    ],
+    "instructions": [
+      "In a saucepan, combine oats and almond milk. Heat over medium until boiling.",
+      "Reduce heat and simmer for 5 minutes, stirring occasionally.",
+      "Remove from heat and stir in the protein powder and chia seeds.",
+      "Serve warm in a bowl."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_2",
+    "name": "Avocado Toast with Poached Egg",
+    "category": "breakfast",
+    "calories": 400,
+    "protein": 18,
+    "carbs": 25,
+    "fat": 22,
+    "diet": "none",
+    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      { "name": "Whole Wheat Bread", "quantity": "2 slices" },
+      { "name": "Avocado", "quantity": "1/2 medium" },
+      { "name": "Egg", "quantity": "2 large" },
+      { "name": "Salt & Pepper", "quantity": "1 pinch" }
+    ],
+    "instructions": [
+      "Toast the slices of whole wheat bread.",
+      "Mash avocado in a bowl with salt and pepper, then spread on the toasted bread.",
+      "Poach the eggs in simmering water for 3-4 minutes.",
+      "Top the avocado toast with the poached eggs and serve."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_3",
+    "name": "Keto Bacon & Eggs scramble",
+    "category": "breakfast",
+    "calories": 450,
+    "protein": 28,
+    "carbs": 3,
+    "fat": 37,
+    "diet": "keto",
+    "allergens": ["dairy"],
+    "ingredients": [
+      { "name": "Eggs", "quantity": "3 large" },
+      { "name": "Bacon strips", "quantity": "3 slices" },
+      { "name": "Cheddar Cheese", "quantity": "20g" },
+      { "name": "Butter", "quantity": "10g" }
+    ],
+    "instructions": [
+      "Fry bacon in a pan until crispy, then remove and set aside.",
+      "In the same pan, melt butter and pour in beaten eggs.",
+      "Scramble eggs over medium-low heat until fluffy.",
+      "Top with shredded cheddar cheese and crumbled bacon."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_4",
+    "name": "Vegan Smoothie Bowl",
+    "category": "breakfast",
+    "calories": 300,
+    "protein": 10,
+    "carbs": 55,
+    "fat": 5,
+    "diet": "vegan",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Frozen Banana", "quantity": "1 medium" },
+      { "name": "Mixed Berries", "quantity": "100g" },
+      { "name": "Soy Milk", "quantity": "150ml" },
+      { "name": "Hemp Seeds", "quantity": "10g" }
+    ],
+    "instructions": [
+      "Blend frozen banana, mixed berries, and soy milk in a high-speed blender until thick and smooth.",
+      "Pour into a bowl.",
+      "Top with hemp seeds and fresh berries.",
+      "Eat immediately with a spoon."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_5",
+    "name": "Grilled Chicken Salad",
+    "category": "lunch",
+    "calories": 450,
+    "protein": 40,
+    "carbs": 12,
+    "fat": 25,
+    "diet": "paleo",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Chicken Breast", "quantity": "150g" },
+      { "name": "Mixed Salad Greens", "quantity": "100g" },
+      { "name": "Olive Oil", "quantity": "1.5 tbsp" },
+      { "name": "Cherry Tomatoes", "quantity": "50g" },
+      { "name": "Cucumber", "quantity": "50g" }
+    ],
+    "instructions": [
+      "Season chicken breast with salt, pepper, and herbs.",
+      "Grill in a pan for 6-7 minutes on each side until fully cooked.",
+      "Chop greens, tomatoes, and cucumber, and place in a bowl.",
+      "Slice the chicken, top the salad, and drizzle with olive oil."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_6",
+    "name": "Keto Salmon & Asparagus",
+    "category": "lunch",
+    "calories": 500,
+    "protein": 38,
+    "carbs": 5,
+    "fat": 35,
+    "diet": "keto",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Salmon Fillet", "quantity": "180g" },
+      { "name": "Asparagus spears", "quantity": "100g" },
+      { "name": "Butter", "quantity": "15g" },
+      { "name": "Lemon Juice", "quantity": "1 tbsp" }
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Place salmon and asparagus on a baking sheet.",
+      "Drizzle melted butter, lemon juice, salt, and pepper over both.",
+      "Bake for 12-15 minutes until salmon flakes easily with a fork."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_7",
+    "name": "Vegan Quinoa Bowl",
+    "category": "lunch",
+    "calories": 480,
+    "protein": 18,
+    "carbs": 70,
+    "fat": 12,
+    "diet": "vegan",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Quinoa (cooked)", "quantity": "150g" },
+      { "name": "Black Beans (canned)", "quantity": "100g" },
+      { "name": "Sweet Corn", "quantity": "50g" },
+      { "name": "Avocado", "quantity": "1/2 medium" },
+      { "name": "Cilantro Lime Dressing", "quantity": "2 tbsp" }
+    ],
+    "instructions": [
+      "Place warm cooked quinoa at the bottom of a bowl.",
+      "Rinse black beans and corn, arrange them on top.",
+      "Slice avocado and place beside the beans.",
+      "Drizzle with cilantro lime dressing and serve."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_8",
+    "name": "Turkey & Swiss Cheese Wrap",
+    "category": "lunch",
+    "calories": 420,
+    "protein": 32,
+    "carbs": 35,
+    "fat": 15,
+    "diet": "none",
+    "allergens": ["gluten", "dairy"],
+    "ingredients": [
+      { "name": "Whole Wheat Tortilla", "quantity": "1 large" },
+      { "name": "Deli Turkey Breast", "quantity": "100g" },
+      { "name": "Swiss Cheese", "quantity": "1 slice" },
+      { "name": "Lettuce and Tomato", "quantity": "50g" },
+      { "name": "Mustard", "quantity": "1 tsp" }
+    ],
+    "instructions": [
+      "Lay tortilla flat and spread mustard down the center.",
+      "Layer turkey slices and Swiss cheese.",
+      "Add lettuce and tomato slices.",
+      "Roll up tightly, slice in half, and serve."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_9",
+    "name": "Lean Beef Stir-Fry",
+    "category": "dinner",
+    "calories": 550,
+    "protein": 42,
+    "carbs": 45,
+    "fat": 20,
+    "diet": "none",
+    "allergens": ["soy", "gluten"],
+    "ingredients": [
+      { "name": "Lean Flank Steak", "quantity": "150g" },
+      { "name": "Broccoli Florets", "quantity": "100g" },
+      { "name": "Bell Pepper", "quantity": "1 medium" },
+      { "name": "Soy Sauce", "quantity": "2 tbsp" },
+      { "name": "Sesame Oil", "quantity": "1 tbsp" },
+      { "name": "Brown Rice (cooked)", "quantity": "100g" }
+    ],
+    "instructions": [
+      "Slice beef into thin strips. Chop broccoli and pepper.",
+      "Heat sesame oil in a wok or large pan over high heat.",
+      "Add beef and stir-fry for 3 minutes. Remove and set aside.",
+      "Add broccoli and pepper, stir-fry for 4 minutes with soy sauce. Return beef, toss, and serve over brown rice."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_10",
+    "name": "Baked Cod & Sweet Potato",
+    "category": "dinner",
+    "calories": 500,
+    "protein": 35,
+    "carbs": 50,
+    "fat": 10,
+    "diet": "paleo",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Cod Fillet", "quantity": "180g" },
+      { "name": "Sweet Potato", "quantity": "200g" },
+      { "name": "Olive Oil", "quantity": "1 tbsp" },
+      { "name": "Paprika & Herbs", "quantity": "1 tsp" }
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Wash and cube sweet potato. Toss in half the olive oil, paprika, and salt.",
+      "Spread sweet potato on a tray and roast for 15 minutes.",
+      "Add seasoned cod fillet to the tray. Drizzle fish with remaining oil and bake everything for another 12-15 minutes."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_11",
+    "name": "Tofu & Broccoli Stir-Fry",
+    "category": "dinner",
+    "calories": 400,
+    "protein": 22,
+    "carbs": 35,
+    "fat": 18,
+    "diet": "vegan",
+    "allergens": ["soy"],
+    "ingredients": [
+      { "name": "Firm Tofu", "quantity": "150g" },
+      { "name": "Broccoli", "quantity": "150g" },
+      { "name": "Sesame Seeds", "quantity": "1 tbsp" },
+      { "name": "Soy Sauce", "quantity": "2 tbsp" },
+      { "name": "Sesame Oil", "quantity": "1 tbsp" }
+    ],
+    "instructions": [
+      "Press tofu to drain excess water, then cube.",
+      "Heat sesame oil in a pan, fry tofu cubes until golden brown.",
+      "Add broccoli and soy sauce. Cook until broccoli is tender-crisp.",
+      "Garnish with sesame seeds and serve."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_12",
+    "name": "High-Protein Turkey Chili",
+    "category": "dinner",
+    "calories": 480,
+    "protein": 38,
+    "carbs": 40,
+    "fat": 12,
+    "diet": "none",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Lean Ground Turkey", "quantity": "150g" },
+      { "name": "Kidney Beans (canned)", "quantity": "100g" },
+      { "name": "Crushed Tomatoes", "quantity": "150g" },
+      { "name": "Onion & Garlic", "quantity": "50g" },
+      { "name": "Chili Powder", "quantity": "1 tbsp" }
+    ],
+    "instructions": [
+      "In a pot, brown the ground turkey with chopped onion and garlic.",
+      "Stir in chili powder, salt, and pepper.",
+      "Add crushed tomatoes and drained kidney beans.",
+      "Simmer over low heat for 20 minutes before serving."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_13",
+    "name": "Greek Yogurt & Berries",
+    "category": "breakfast",
+    "calories": 200,
+    "protein": 18,
+    "carbs": 15,
+    "fat": 3,
+    "diet": "none",
+    "allergens": ["dairy"],
+    "ingredients": [
+      { "name": "Non-Fat Greek Yogurt", "quantity": "170g" },
+      { "name": "Mixed Berries", "quantity": "70g" },
+      { "name": "Honey", "quantity": "1 tsp" }
+    ],
+    "instructions": [
+      "Spoon Greek yogurt into a bowl.",
+      "Top with fresh mixed berries.",
+      "Drizzle honey over the berries and serve chilled."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_14",
+    "name": "Almond Butter & Apple",
+    "category": "breakfast",
+    "calories": 250,
+    "protein": 6,
+    "carbs": 25,
+    "fat": 16,
+    "diet": "vegan",
+    "allergens": ["nuts"],
+    "ingredients": [
+      { "name": "Apple", "quantity": "1 medium" },
+      { "name": "Almond Butter", "quantity": "2 tbsp" }
+    ],
+    "instructions": [
+      "Wash and slice the apple.",
+      "Arrange apple slices on a plate.",
+      "Serve with almond butter on the side for dipping."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_15",
+    "name": "Whey Protein Shake",
+    "category": "breakfast",
+    "calories": 180,
+    "protein": 30,
+    "carbs": 5,
+    "fat": 3,
+    "diet": "none",
+    "allergens": ["dairy"],
+    "ingredients": [
+      { "name": "Whey Protein Powder", "quantity": "35g" },
+      { "name": "Water or Almond Milk", "quantity": "250ml" }
+    ],
+    "instructions": [
+      "Add liquid to a shaker bottle.",
+      "Add the scoop of whey protein powder.",
+      "Shake vigorously for 30 seconds until fully mixed."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_16",
+    "name": "Hummus & Carrot Sticks",
+    "category": "lunch",
+    "calories": 150,
+    "protein": 5,
+    "carbs": 18,
+    "fat": 7,
+    "diet": "vegan",
+    "allergens": [],
+    "ingredients": [
+      { "name": "Carrots", "quantity": "2 medium" },
+      { "name": "Hummus", "quantity": "4 tbsp" }
+    ],
+    "instructions": [
+      "Peel carrots and cut them into sticks.",
+      "Spoon hummus onto a small plate or bowl.",
+      "Serve together as a healthy snack."
+    ],
+    "approved": true,
+    "custom": false
+  },
+  {
+    "id": "recipe_17",
+    "name": "Spinach & Feta Omelette",
+    "category": "breakfast",
+    "calories": 380, "protein": 28, "carbs": 5, "fat": 28,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Eggs", "quantity": "3"}, {"name": "Spinach", "quantity": "1 cup"}, {"name": "Feta Cheese", "quantity": "30g"}],
+    "instructions": ["Whisk eggs with salt and pepper.", "In a non-stick skillet, sauté spinach until wilted.", "Pour eggs over spinach, cook until set, then sprinkle with feta."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_18",
+    "name": "Blueberry Protein Pancakes",
+    "category": "breakfast",
+    "calories": 450, "protein": 35, "carbs": 45, "fat": 15,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Kodiak Pancake Mix", "quantity": "1/2 cup"}, {"name": "Whey Protein", "quantity": "1 scoop"}, {"name": "Blueberries", "quantity": "1/2 cup"}],
+    "instructions": ["Mix pancake mix, protein powder, and water to form a batter.", "Fold in blueberries.", "Cook on a lightly oiled griddle until golden brown on both sides."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_19",
+    "name": "Cottage Cheese & Peaches",
+    "category": "breakfast",
+    "calories": 250, "protein": 25, "carbs": 20, "fat": 8,
+    "diet": "none", "allergens": ["dairy"],
+    "ingredients": [{"name": "Low-Fat Cottage Cheese", "quantity": "1 cup"}, {"name": "Peach Slices", "quantity": "1 medium"}, {"name": "Cinnamon", "quantity": "1 tsp"}],
+    "instructions": ["Spoon cottage cheese into a bowl.", "Top with fresh peach slices.", "Sprinkle with cinnamon."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_20",
+    "name": "Keto Breakfast Burrito",
+    "category": "breakfast",
+    "calories": 480, "protein": 30, "carbs": 8, "fat": 38,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Low-Carb Tortilla", "quantity": "1"}, {"name": "Sausage Patty", "quantity": "1"}, {"name": "Scrambled Eggs", "quantity": "2"}, {"name": "Shredded Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Cook sausage patty and scramble eggs.", "Warm the low-carb tortilla.", "Fill tortilla with eggs, sausage, and cheese, then roll into a burrito."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_21",
+    "name": "Apple Cinnamon Chia Pudding",
+    "category": "breakfast",
+    "calories": 320, "protein": 10, "carbs": 40, "fat": 15,
+    "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Chia Seeds", "quantity": "3 tbsp"}, {"name": "Almond Milk", "quantity": "1 cup"}, {"name": "Diced Apple", "quantity": "1/2 cup"}, {"name": "Cinnamon", "quantity": "1 tsp"}],
+    "instructions": ["Mix chia seeds, almond milk, and cinnamon in a jar.", "Stir well and refrigerate overnight.", "In the morning, top with diced apple."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_22",
+    "name": "Smoked Salmon Bagel",
+    "category": "breakfast",
+    "calories": 450, "protein": 25, "carbs": 50, "fat": 18,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Everything Bagel", "quantity": "1"}, {"name": "Cream Cheese", "quantity": "2 tbsp"}, {"name": "Smoked Salmon", "quantity": "50g"}, {"name": "Capers", "quantity": "1 tsp"}],
+    "instructions": ["Toast the bagel.", "Spread cream cheese on both halves.", "Top with smoked salmon and capers."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_23",
+    "name": "Tofu Scramble",
+    "category": "breakfast",
+    "calories": 350, "protein": 22, "carbs": 15, "fat": 22,
+    "diet": "vegan", "allergens": ["soy"],
+    "ingredients": [{"name": "Firm Tofu", "quantity": "150g"}, {"name": "Nutritional Yeast", "quantity": "1 tbsp"}, {"name": "Turmeric", "quantity": "1/2 tsp"}, {"name": "Black Salt (Kala Namak)", "quantity": "1 pinch"}],
+    "instructions": ["Crumble tofu into a pan.", "Add nutritional yeast, turmeric, and black salt.", "Sauté until heated through, stirring occasionally."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_24",
+    "name": "Chocolate Peanut Butter Smoothie",
+    "category": "breakfast",
+    "calories": 480, "protein": 35, "carbs": 30, "fat": 25,
+    "diet": "none", "allergens": ["dairy", "nuts"],
+    "ingredients": [{"name": "Chocolate Whey Protein", "quantity": "1 scoop"}, {"name": "Peanut Butter", "quantity": "2 tbsp"}, {"name": "Banana", "quantity": "1/2"}, {"name": "Milk", "quantity": "1 cup"}],
+    "instructions": ["Combine all ingredients in a blender.", "Blend until smooth.", "Pour into a glass and enjoy."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_25",
+    "name": "Breakfast Quesadilla",
+    "category": "breakfast",
+    "calories": 420, "protein": 25, "carbs": 30, "fat": 22,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Flour Tortilla", "quantity": "1"}, {"name": "Scrambled Eggs", "quantity": "2"}, {"name": "Black Beans", "quantity": "1/4 cup"}, {"name": "Shredded Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Place tortilla in a pan.", "Layer one half with cheese, eggs, and beans.", "Fold the other half over and cook until golden brown on both sides."],
+    "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_26", "name": "Paleo Sweet Potato Hash", "category": "breakfast", "calories": 400, "protein": 20, "carbs": 35, "fat": 20, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Sweet Potato", "quantity": "1 medium"}, {"name": "Ground Sausage", "quantity": "100g"}, {"name": "Bell Pepper", "quantity": "1/2"}],
+    "instructions": ["Dice sweet potato and bell pepper.", "Brown sausage in a skillet.", "Add potatoes and pepper, cook until tender."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_27", "name": "Almond Flour Waffles", "category": "breakfast", "calories": 450, "protein": 15, "carbs": 10, "fat": 38, "diet": "keto", "allergens": ["nuts", "dairy"],
+    "ingredients": [{"name": "Almond Flour", "quantity": "1/2 cup"}, {"name": "Egg", "quantity": "1"}, {"name": "Melted Butter", "quantity": "2 tbsp"}],
+    "instructions": ["Mix all ingredients to form a batter.", "Cook in a preheated waffle iron until golden."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_28", "name": "Overnight Oats", "category": "breakfast", "calories": 380, "protein": 15, "carbs": 55, "fat": 12, "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Rolled Oats", "quantity": "1/2 cup"}, {"name": "Almond Milk", "quantity": "1/2 cup"}, {"name": "Maple Syrup", "quantity": "1 tbsp"}, {"name": "Berries", "quantity": "1/2 cup"}],
+    "instructions": ["Combine oats, milk, and syrup in a jar.", "Refrigerate overnight.", "Top with berries before serving."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_29", "name": "Sausage and Egg Casserole", "category": "breakfast", "calories": 420, "protein": 30, "carbs": 5, "fat": 30, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Ground Sausage", "quantity": "150g"}, {"name": "Eggs", "quantity": "3"}, {"name": "Heavy Cream", "quantity": "1/4 cup"}, {"name": "Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Brown sausage and place in a baking dish.", "Whisk eggs and cream, pour over sausage.", "Top with cheese and bake at 180C for 20-25 mins."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_30", "name": "Fruit and Nut Granola", "category": "breakfast", "calories": 400, "protein": 10, "carbs": 50, "fat": 18, "diet": "none", "allergens": ["nuts", "gluten"],
+    "ingredients": [{"name": "Granola", "quantity": "1 cup"}, {"name": "Milk", "quantity": "1/2 cup"}, {"name": "Mixed Nuts", "quantity": "1/4 cup"}],
+    "instructions": ["Pour granola into a bowl.", "Add milk and top with mixed nuts."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_31", "name": "Shakshuka", "category": "breakfast", "calories": 380, "protein": 20, "carbs": 25, "fat": 22, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Canned Tomatoes", "quantity": "1 cup"}, {"name": "Onion", "quantity": "1/2"}, {"name": "Eggs", "quantity": "2"}, {"name": "Spices", "quantity": "1 tsp"}],
+    "instructions": ["Sauté onion, add tomatoes and spices, simmer for 10 mins.", "Make wells in the sauce and crack eggs into them.", "Cover and cook until eggs are set."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_32", "name": "Gluten-Free Banana Muffins", "category": "breakfast", "calories": 300, "protein": 8, "carbs": 40, "fat": 12, "diet": "gluten-free", "allergens": ["nuts"],
+    "ingredients": [{"name": "Gluten-Free Flour", "quantity": "1 cup"}, {"name": "Mashed Banana", "quantity": "1"}, {"name": "Egg", "quantity": "1"}, {"name": "Almond Butter", "quantity": "2 tbsp"}],
+    "instructions": ["Mix all ingredients.", "Pour into a muffin tin.", "Bake at 180C for 20 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_33", "name": "Breakfast Sausage Patties", "category": "breakfast", "calories": 350, "protein": 25, "carbs": 1, "fat": 27, "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Ground Pork", "quantity": "150g"}, {"name": "Sage", "quantity": "1 tsp"}, {"name": "Salt & Pepper", "quantity": "1 pinch"}],
+    "instructions": ["Mix pork with seasonings.", "Form into patties.", "Pan-fry until cooked through."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_34", "name": "Simple French Toast", "category": "breakfast", "calories": 380, "protein": 15, "carbs": 45, "fat": 15, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Bread", "quantity": "2 slices"}, {"name": "Egg", "quantity": "1"}, {"name": "Milk", "quantity": "1/4 cup"}, {"name": "Cinnamon", "quantity": "1/2 tsp"}],
+    "instructions": ["Whisk egg, milk, and cinnamon.", "Dip bread slices in mixture.", "Cook on a buttered pan until golden brown."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_35", "name": "Vegan Breakfast Tacos", "category": "breakfast", "calories": 400, "protein": 20, "carbs": 40, "fat": 18, "diet": "vegan", "allergens": ["soy", "gluten"],
+    "ingredients": [{"name": "Corn Tortillas", "quantity": "3"}, {"name": "Tofu Scramble", "quantity": "1/2 cup"}, {"name": "Black Beans", "quantity": "1/4 cup"}, {"name": "Salsa", "quantity": "2 tbsp"}],
+    "instructions": ["Warm tortillas.", "Fill with tofu scramble and black beans.", "Top with salsa."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_36", "name": "Cream Cheese Pancakes", "category": "breakfast", "calories": 400, "protein": 20, "carbs": 8, "fat": 32, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Cream Cheese", "quantity": "60g"}, {"name": "Eggs", "quantity": "2"}, {"name": "Sweetener", "quantity": "1 tbsp"}],
+    "instructions": ["Blend all ingredients until smooth.", "Pour small pancakes onto a hot, greased skillet.", "Cook for 2-3 minutes per side."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_37", "name": "Hard Boiled Eggs & Fruit", "category": "breakfast", "calories": 280, "protein": 12, "carbs": 25, "fat": 15, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Eggs", "quantity": "2"}, {"name": "Apple", "quantity": "1 medium"}],
+    "instructions": ["Boil eggs for 10 minutes, then peel.", "Serve with a sliced apple."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_38", "name": "Chocolate Avocado Mousse",
+    "category": "breakfast",
+    "calories": 350, "protein": 8, "carbs": 30, "fat": 25,
+    "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Avocado", "quantity": "1"}, {"name": "Cocoa Powder", "quantity": "3 tbsp"}, {"name": "Maple Syrup", "quantity": "2 tbsp"}, {"name": "Almond Milk", "quantity": "1/4 cup"}],
+    "instructions": ["Blend all ingredients until completely smooth.", "Chill for at least 30 minutes before serving."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_39", "name": "Breakfast BLT Sandwich",
+    "category": "breakfast",
+    "calories": 450, "protein": 25, "carbs": 30, "fat": 25,
+    "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Toasted Bread", "quantity": "2 slices"}, {"name": "Bacon", "quantity": "3 slices"}, {"name": "Lettuce", "quantity": "2 leaves"}, {"name": "Tomato", "quantity": "2 slices"}, {"name": "Fried Egg", "quantity": "1"}],
+    "instructions": ["Cook bacon and fry an egg.", "Assemble sandwich with bacon, lettuce, tomato, and the fried egg."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_40", "name": "Coconut Flour Porridge",
+    "category": "breakfast",
+    "calories": 380, "protein": 12, "carbs": 15, "fat": 30,
+    "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Coconut Flour", "quantity": "3 tbsp"}, {"name": "Coconut Milk", "quantity": "1 cup"}, {"name": "Berries", "quantity": "1/4 cup"}],
+    "instructions": ["Whisk coconut flour and milk in a saucepan.", "Heat over medium, stirring constantly, until thickened.", "Top with berries."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_41", "name": "Ham and Cheese Croissant",
+    "category": "breakfast",
+    "calories": 420, "protein": 18, "carbs": 35, "fat": 24,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Croissant", "quantity": "1"}, {"name": "Deli Ham", "quantity": "50g"}, {"name": "Swiss Cheese", "quantity": "1 slice"}],
+    "instructions": ["Slice croissant in half.", "Layer ham and cheese inside.", "Warm in oven or microwave until cheese is melted."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_42", "name": "Acai Bowl",
+    "category": "breakfast",
+    "calories": 380, "protein": 8, "carbs": 60, "fat": 12,
+    "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Frozen Acai Packet", "quantity": "1"}, {"name": "Banana", "quantity": "1/2"}, {"name": "Granola", "quantity": "1/4 cup"}, {"name": "Coconut Flakes", "quantity": "1 tbsp"}],
+    "instructions": ["Blend acai and banana until smooth.", "Pour into a bowl.", "Top with granola and coconut flakes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_43", "name": "Steak and Eggs",
+    "category": "breakfast",
+    "calories": 550, "protein": 45, "carbs": 1, "fat": 40,
+    "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Sirloin Steak", "quantity": "150g"}, {"name": "Eggs", "quantity": "2"}, {"name": "Butter", "quantity": "1 tbsp"}],
+    "instructions": ["Season and pan-sear steak to desired doneness.", "In the same pan, fry two eggs in butter.", "Serve steak and eggs together."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_44", "name": "Cinnamon Roll Mug Cake",
+    "category": "breakfast",
+    "calories": 350, "protein": 10, "carbs": 45, "fat": 15,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Flour", "quantity": "4 tbsp"}, {"name": "Sugar", "quantity": "2 tbsp"}, {"name": "Milk", "quantity": "3 tbsp"}, {"name": "Cinnamon", "quantity": "1 tsp"}],
+    "instructions": ["Mix all ingredients in a mug.", "Microwave for 90 seconds.", "Top with a simple icing if desired."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_45", "name": "Vegan French Toast",
+    "category": "breakfast",
+    "calories": 360, "protein": 12, "carbs": 50, "fat": 12,
+    "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Bread", "quantity": "2 slices"}, {"name": "Almond Milk", "quantity": "1/4 cup"}, {"name": "Nutritional Yeast", "quantity": "1 tbsp"}, {"name": "Cinnamon", "quantity": "1/2 tsp"}],
+    "instructions": ["Whisk milk, nutritional yeast, and cinnamon.", "Dip bread slices in mixture.", "Cook on a non-stick pan until golden brown."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_46", "name": "Prosciutto-Wrapped Melon",
+    "category": "breakfast",
+    "calories": 200, "protein": 15, "carbs": 20, "fat": 7,
+    "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Cantaloupe Melon", "quantity": "1/4"}, {"name": "Prosciutto", "quantity": "50g"}],
+    "instructions": ["Slice melon into wedges.", "Wrap each wedge with a slice of prosciutto."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_47", "name": "Egg White & Veggie Scramble",
+    "category": "breakfast",
+    "calories": 250, "protein": 25, "carbs": 10, "fat": 12,
+    "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Egg Whites", "quantity": "1 cup"}, {"name": "Bell Peppers", "quantity": "1/2 cup"}, {"name": "Onion", "quantity": "1/4 cup"}],
+    "instructions": ["Sauté chopped peppers and onion until soft.", "Add egg whites and scramble until cooked through."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_48", "name": "Keto Coffee (Bulletproof)",
+    "category": "breakfast",
+    "calories": 250, "protein": 1, "carbs": 1, "fat": 28,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Brewed Coffee", "quantity": "1 cup"}, {"name": "MCT Oil", "quantity": "1 tbsp"}, {"name": "Grass-fed Butter", "quantity": "1 tbsp"}],
+    "instructions": ["Combine hot coffee, MCT oil, and butter in a blender.", "Blend on high for 20-30 seconds until frothy."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_49", "name": "Rice Cakes with Peanut Butter",
+    "category": "breakfast",
+    "calories": 300, "protein": 10, "carbs": 35, "fat": 15,
+    "diet": "gluten-free", "allergens": ["nuts"],
+    "ingredients": [{"name": "Brown Rice Cakes", "quantity": "2"}, {"name": "Peanut Butter", "quantity": "2 tbsp"}, {"name": "Banana Slices", "quantity": "1/2"}],
+    "instructions": ["Spread peanut butter on rice cakes.", "Top with banana slices."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_50", "name": "Breakfast Corn Dogs",
+    "category": "breakfast",
+    "calories": 380, "protein": 15, "carbs": 30, "fat": 22,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Sausage Links", "quantity": "2"}, {"name": "Pancake Batter", "quantity": "1/2 cup"}],
+    "instructions": ["Cook sausage links.", "Dip sausages in pancake batter.", "Fry or bake until golden brown."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_51", "name": "Frittata with Asparagus & Goat Cheese",
+    "category": "breakfast",
+    "calories": 390, "protein": 26, "carbs": 8, "fat": 28,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Eggs", "quantity": "3"}, {"name": "Asparagus", "quantity": "5 spears"}, {"name": "Goat Cheese", "quantity": "30g"}],
+    "instructions": ["Sauté chopped asparagus in an oven-safe skillet.", "Whisk eggs and pour over asparagus.", "Top with goat cheese and bake at 180C for 15 mins."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_52", "name": "Mango Lassi Smoothie",
+    "category": "breakfast",
+    "calories": 320, "protein": 15, "carbs": 50, "fat": 7,
+    "diet": "none", "allergens": ["dairy"],
+    "ingredients": [{"name": "Greek Yogurt", "quantity": "1/2 cup"}, {"name": "Frozen Mango", "quantity": "1 cup"}, {"name": "Milk", "quantity": "1/2 cup"}],
+    "instructions": ["Combine all ingredients in a blender.", "Blend until smooth."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_53", "name": "Paleo Breakfast Skillet",
+    "category": "breakfast",
+    "calories": 450, "protein": 28, "carbs": 20, "fat": 28,
+    "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Ground Beef", "quantity": "120g"}, {"name": "Diced Butternut Squash", "quantity": "1 cup"}, {"name": "Kale", "quantity": "1 cup"}],
+    "instructions": ["Brown ground beef in a skillet.", "Add butternut squash and cook until tender.", "Stir in kale until wilted."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_54", "name": "Savory Oatmeal with Egg",
+    "category": "breakfast",
+    "calories": 380, "protein": 20, "carbs": 40, "fat": 15,
+    "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Rolled Oats", "quantity": "1/2 cup"}, {"name": "Water", "quantity": "1 cup"}, {"name": "Fried Egg", "quantity": "1"}, {"name": "Soy Sauce", "quantity": "1 tsp"}],
+    "instructions": ["Cook oats with water until creamy.", "Top with a fried egg and a drizzle of soy sauce."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_55", "name": "Vegan Protein Waffles",
+    "category": "breakfast",
+    "calories": 430, "protein": 25, "carbs": 45, "fat": 16,
+    "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Whole Wheat Flour", "quantity": "1/2 cup"}, {"name": "Vegan Protein Powder", "quantity": "1 scoop"}, {"name": "Almond Milk", "quantity": "3/4 cup"}],
+    "instructions": ["Mix all ingredients to form a batter.", "Cook in a preheated waffle iron."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_56", "name": "Breakfast Pizza",
+    "category": "breakfast",
+    "calories": 480, "protein": 28, "carbs": 35, "fat": 25,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Pizza Dough", "quantity": "1 small"}, {"name": "Scrambled Eggs", "quantity": "2"}, {"name": "Bacon Bits", "quantity": "2 tbsp"}, {"name": "Mozzarella Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Press dough onto a small pan.", "Top with eggs, bacon, and cheese.", "Bake at 200C for 12-15 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_57", "name": "Keto Chaffles",
+    "category": "breakfast",
+    "calories": 350, "protein": 20, "carbs": 4, "fat": 28,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Shredded Mozzarella", "quantity": "1/2 cup"}, {"name": "Egg", "quantity": "1"}],
+    "instructions": ["Mix cheese and egg.", "Pour half the mixture into a mini waffle maker and cook for 3-4 minutes.", "Repeat with remaining mixture."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_58", "name": "Green Smoothie",
+    "category": "breakfast",
+    "calories": 280, "protein": 15, "carbs": 40, "fat": 7,
+    "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Spinach", "quantity": "1 cup"}, {"name": "Banana", "quantity": "1"}, {"name": "Vegan Protein Powder", "quantity": "1/2 scoop"}, {"name": "Water", "quantity": "1 cup"}],
+    "instructions": ["Combine all ingredients in a blender.", "Blend until smooth."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_59", "name": "English Muffin with Sausage",
+    "category": "breakfast",
+    "calories": 390, "protein": 22, "carbs": 30, "fat": 20,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "English Muffin", "quantity": "1"}, {"name": "Sausage Patty", "quantity": "1"}, {"name": "American Cheese", "quantity": "1 slice"}],
+    "instructions": ["Toast the English muffin.", "Cook the sausage patty.", "Assemble the sandwich with sausage and cheese."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_60", "name": "Paleo Banana Pancakes",
+    "category": "breakfast",
+    "calories": 350, "protein": 12, "carbs": 30, "fat": 20,
+    "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Mashed Banana", "quantity": "1"}, {"name": "Eggs", "quantity": "2"}, {"name": "Cinnamon", "quantity": "1/2 tsp"}],
+    "instructions": ["Whisk all ingredients together.", "Pour small pancakes onto a greased skillet.", "Cook for 2-3 minutes per side."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_61", "name": "Breakfast Bowl",
+    "category": "breakfast",
+    "calories": 450, "protein": 25, "carbs": 35, "fat": 22,
+    "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Roasted Potatoes", "quantity": "1 cup"}, {"name": "Scrambled Eggs", "quantity": "2"}, {"name": "Salsa", "quantity": "1/4 cup"}],
+    "instructions": ["Place roasted potatoes in a bowl.", "Top with scrambled eggs and salsa."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_62", "name": "Chocolate Chip Baked Oats",
+    "category": "breakfast",
+    "calories": 420, "protein": 15, "carbs": 60, "fat": 15,
+    "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Rolled Oats", "quantity": "1/2 cup"}, {"name": "Almond Milk", "quantity": "1/2 cup"}, {"name": "Mashed Banana", "quantity": "1/2"}, {"name": "Chocolate Chips", "quantity": "2 tbsp"}],
+    "instructions": ["Blend all ingredients except chocolate chips.", "Stir in chips, pour into a ramekin.", "Bake at 180C for 20-25 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_63", "name": "Denver Omelette",
+    "category": "breakfast",
+    "calories": 400, "protein": 28, "carbs": 8, "fat": 28,
+    "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Eggs", "quantity": "3"}, {"name": "Diced Ham", "quantity": "50g"}, {"name": "Bell Pepper", "quantity": "1/4 cup"}, {"name": "Onion", "quantity": "1/4 cup"}],
+    "instructions": ["Sauté ham, pepper, and onion.", "Pour whisked eggs over the mixture.", "Cook until set, then fold in half."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_64", "name": "Congee (Rice Porridge)",
+    "category": "breakfast",
+    "calories": 300, "protein": 10, "carbs": 60, "fat": 2,
+    "diet": "gluten-free", "allergens": [],
+    "ingredients": [{"name": "White Rice", "quantity": "1/2 cup"}, {"name": "Water or Broth", "quantity": "4 cups"}, {"name": "Scallions", "quantity": "1 tbsp"}],
+    "instructions": ["Combine rice and water in a pot.", "Bring to a boil, then simmer for 1-1.5 hours until thick and creamy.", "Garnish with scallions."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_65", "name": "Ricotta Toast with Honey",
+    "category": "breakfast",
+    "calories": 350, "protein": 15, "carbs": 40, "fat": 15,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Sourdough Bread", "quantity": "1 slice"}, {"name": "Ricotta Cheese", "quantity": "1/4 cup"}, {"name": "Honey", "quantity": "1 tbsp"}, {"name": "Pistachios", "quantity": "1 tbsp"}],
+    "instructions": ["Toast the bread.", "Spread ricotta cheese on top.", "Drizzle with honey and sprinkle with pistachios."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_66", "name": "Breakfast Strata",
+    "category": "breakfast",
+    "calories": 430, "protein": 25, "carbs": 25, "fat": 25,
+    "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Bread Cubes", "quantity": "1 cup"}, {"name": "Sausage", "quantity": "80g"}, {"name": "Eggs", "quantity": "2"}, {"name": "Milk", "quantity": "1/2 cup"}],
+    "instructions": ["Layer bread and cooked sausage in a baking dish.", "Whisk eggs and milk, pour over.", "Bake at 180C for 30 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_67", "name": "Chicken Caesar Wrap", "category": "lunch", "calories": 500, "protein": 40, "carbs": 35, "fat": 22, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Flour Tortilla", "quantity": "1 large"}, {"name": "Grilled Chicken", "quantity": "120g"}, {"name": "Romaine Lettuce", "quantity": "1 cup"}, {"name": "Caesar Dressing", "quantity": "2 tbsp"}],
+    "instructions": ["Warm tortilla.", "Toss chicken and lettuce with dressing.", "Fill tortilla and roll tightly."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_68", "name": "Spicy Tuna Salad Sandwich", "category": "lunch", "calories": 450, "protein": 30, "carbs": 30, "fat": 20, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Canned Tuna", "quantity": "1 can"}, {"name": "Mayonnaise", "quantity": "2 tbsp"}, {"name": "Sriracha", "quantity": "1 tsp"}, {"name": "Whole Wheat Bread", "quantity": "2 slices"}],
+    "instructions": ["Mix tuna, mayonnaise, and sriracha.", "Serve between two slices of bread."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_69", "name": "Mediterranean Quinoa Salad", "category": "lunch", "calories": 480, "protein": 15, "carbs": 60, "fat": 20, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Cooked Quinoa", "quantity": "1 cup"}, {"name": "Cucumber", "quantity": "1/2"}, {"name": "Tomatoes", "quantity": "1/2 cup"}, {"name": "Feta (or vegan alternative)", "quantity": "30g"}],
+    "instructions": ["Chop cucumber and tomatoes.", "Combine all ingredients in a bowl and toss with a lemon vinaigrette."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_70", "name": "Black Bean Burgers", "category": "lunch", "calories": 420, "protein": 20, "carbs": 55, "fat": 12, "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Black Beans", "quantity": "1 can"}, {"name": "Breadcrumbs", "quantity": "1/2 cup"}, {"name": "Onion", "quantity": "1/4"}, {"name": "Bun", "quantity": "1"}],
+    "instructions": ["Mash beans and mix with breadcrumbs and diced onion.", "Form into a patty and pan-fry until crisp.", "Serve on a bun with your favorite toppings."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_71", "name": "Caprese Sandwich", "category": "lunch", "calories": 400, "protein": 18, "carbs": 35, "fat": 20, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Ciabatta Roll", "quantity": "1"}, {"name": "Fresh Mozzarella", "quantity": "60g"}, {"name": "Tomato", "quantity": "1"}, {"name": "Basil Leaves", "quantity": "5-6"}, {"name": "Balsamic Glaze", "quantity": "1 tbsp"}],
+    "instructions": ["Slice roll.", "Layer mozzarella, tomato, and basil.", "Drizzle with balsamic glaze."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_72", "name": "Keto Cobb Salad", "category": "lunch", "calories": 550, "protein": 40, "carbs": 10, "fat": 40, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Grilled Chicken", "quantity": "120g"}, {"name": "Bacon", "quantity": "2 slices"}, {"name": "Hard Boiled Egg", "quantity": "1"}, {"name": "Avocado", "quantity": "1/2"}, {"name": "Blue Cheese", "quantity": "30g"}],
+    "instructions": ["Arrange chopped lettuce in a bowl.", "Top with rows of chicken, crumbled bacon, chopped egg, avocado, and blue cheese.", "Serve with ranch dressing."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_73", "name": "Lentil Soup", "category": "lunch", "calories": 350, "protein": 18, "carbs": 60, "fat": 4, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Brown Lentils", "quantity": "1/2 cup"}, {"name": "Vegetable Broth", "quantity": "2 cups"}, {"name": "Carrot", "quantity": "1"}, {"name": "Celery", "quantity": "1 stalk"}],
+    "instructions": ["Sauté chopped carrot and celery.", "Add lentils and broth.", "Simmer for 25-30 minutes until lentils are tender."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_74", "name": "Shrimp and Avocado Salad", "category": "lunch", "calories": 400, "protein": 25, "carbs": 15, "fat": 28, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Cooked Shrimp", "quantity": "150g"}, {"name": "Avocado", "quantity": "1"}, {"name": "Red Onion", "quantity": "1/4"}, {"name": "Lime Juice", "quantity": "1 tbsp"}],
+    "instructions": ["Chop shrimp, avocado, and red onion.", "Gently toss with lime juice, salt, and pepper."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_75", "name": "Beef and Broccoli Bowl", "category": "lunch", "calories": 500, "protein": 35, "carbs": 45, "fat": 20, "diet": "none", "allergens": ["soy", "gluten"],
+    "ingredients": [{"name": "Flank Steak", "quantity": "120g"}, {"name": "Broccoli", "quantity": "1 cup"}, {"name": "Rice", "quantity": "1/2 cup cooked"}, {"name": "Stir-fry Sauce", "quantity": "2 tbsp"}],
+    "instructions": ["Stir-fry sliced steak until browned.", "Add broccoli and sauce, cook until tender-crisp.", "Serve over rice."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_76", "name": "Leftover Chicken & Veggies", "category": "lunch", "calories": 420, "protein": 35, "carbs": 25, "fat": 20, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Roast Chicken", "quantity": "150g"}, {"name": "Roasted Root Vegetables", "quantity": "1 cup"}],
+    "instructions": ["Simply reheat leftover chicken and vegetables in a microwave or pan."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_77", "name": "Vegan Chickpea Salad Sandwich", "category": "lunch", "calories": 430, "protein": 18, "carbs": 50, "fat": 18, "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Canned Chickpeas", "quantity": "1 can"}, {"name": "Vegan Mayo", "quantity": "2 tbsp"}, {"name": "Celery", "quantity": "1 stalk"}, {"name": "Bread", "quantity": "2 slices"}],
+    "instructions": ["Mash chickpeas.", "Mix with vegan mayo and diced celery.", "Serve as a sandwich."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_78", "name": "BLT Salad", "category": "lunch", "calories": 450, "protein": 20, "carbs": 15, "fat": 35, "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Bacon", "quantity": "4 slices"}, {"name": "Romaine Lettuce", "quantity": "2 cups"}, {"name": "Cherry Tomatoes", "quantity": "1/2 cup"}, {"name": "Ranch Dressing", "quantity": "2 tbsp"}],
+    "instructions": ["Cook and crumble bacon.", "Toss lettuce and tomatoes with ranch dressing.", "Top with bacon crumbles."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_79", "name": "Pasta Salad", "category": "lunch", "calories": 480, "protein": 15, "carbs": 65, "fat": 18, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Cooked Pasta", "quantity": "1 cup"}, {"name": "Cherry Tomatoes", "quantity": "1/2 cup"}, {"name": "Mozzarella Pearls", "quantity": "1/4 cup"}, {"name": "Italian Dressing", "quantity": "2 tbsp"}],
+    "instructions": ["Combine all ingredients in a bowl.", "Toss to combine.", "Serve chilled."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_80", "name": "Stuffed Bell Peppers", "category": "lunch", "calories": 450, "protein": 30, "carbs": 35, "fat": 20, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Bell Pepper", "quantity": "1"}, {"name": "Ground Turkey", "quantity": "120g"}, {"name": "Cooked Rice", "quantity": "1/2 cup"}, {"name": "Tomato Sauce", "quantity": "1/4 cup"}],
+    "instructions": ["Cook ground turkey.", "Mix with rice and sauce.", "Stuff into a halved bell pepper and bake at 180C for 25 mins."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_81", "name": "Egg Roll in a Bowl", "category": "lunch", "calories": 420, "protein": 28, "carbs": 15, "fat": 28, "diet": "keto", "allergens": ["soy"],
+    "ingredients": [{"name": "Ground Pork", "quantity": "150g"}, {"name": "Coleslaw Mix", "quantity": "2 cups"}, {"name": "Soy Sauce", "quantity": "2 tbsp"}, {"name": "Sesame Oil", "quantity": "1 tsp"}],
+    "instructions": ["Brown pork in a skillet.", "Add coleslaw mix and sauces.", "Stir-fry until cabbage is wilted."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_82", "name": "Sweet Potato and Black Bean Tacos", "category": "lunch", "calories": 460, "protein": 15, "carbs": 70, "fat": 12, "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Corn Tortillas", "quantity": "3"}, {"name": "Roasted Sweet Potato", "quantity": "1 cup"}, {"name": "Black Beans", "quantity": "1/2 cup"}, {"name": "Avocado", "quantity": "1/4"}],
+    "instructions": ["Warm tortillas.", "Fill with roasted sweet potato and black beans.", "Top with avocado slices."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_83", "name": "Chicken Noodle Soup", "category": "lunch", "calories": 350, "protein": 25, "carbs": 40, "fat": 10, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Chicken Broth", "quantity": "2 cups"}, {"name": "Cooked Chicken", "quantity": "100g"}, {"name": "Egg Noodles", "quantity": "1/2 cup"}, {"name": "Carrots & Celery", "quantity": "1/2 cup"}],
+    "instructions": ["Bring broth to a boil.", "Add noodles and vegetables, cook until tender.", "Stir in cooked chicken."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_84", "name": "Sausage and Peppers Sub", "category": "lunch", "calories": 550, "protein": 25, "carbs": 50, "fat": 28, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Italian Sausage", "quantity": "1 link"}, {"name": "Bell Peppers & Onions", "quantity": "1 cup"}, {"name": "Sub Roll", "quantity": "1"}],
+    "instructions": ["Cook sausage.", "Sauté peppers and onions.", "Serve in a sub roll."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_85", "name": "Paleo Tuna Stuffed Avocado", "category": "lunch", "calories": 400, "protein": 25, "carbs": 10, "fat": 30, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Avocado", "quantity": "1"}, {"name": "Canned Tuna", "quantity": "1 can"}, {"name": "Diced Celery", "quantity": "1/4 cup"}],
+    "instructions": ["Halve avocado and remove pit.", "Mix tuna and celery.", "Fill avocado halves with tuna salad."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_86", "name": "Deconstructed Sushi Bowl", "category": "lunch", "calories": 480, "protein": 25, "carbs": 60, "fat": 15, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Sushi Rice", "quantity": "1 cup"}, {"name": "Cooked Salmon or Tuna", "quantity": "100g"}, {"name": "Cucumber", "quantity": "1/2"}, {"name": "Avocado", "quantity": "1/4"}],
+    "instructions": ["Place rice in a bowl.", "Top with fish, cucumber, and avocado.", "Drizzle with soy sauce."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_87", "name": "Tomato Soup and Grilled Cheese", "category": "lunch", "calories": 550, "protein": 20, "carbs": 60, "fat": 25, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Tomato Soup", "quantity": "1 can"}, {"name": "Bread", "quantity": "2 slices"}, {"name": "Cheese", "quantity": "2 slices"}],
+    "instructions": ["Heat tomato soup.", "Make a grilled cheese sandwich.", "Serve together."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_88", "name": "Keto Chicken Salad Lettuce Wraps", "category": "lunch", "calories": 420, "protein": 35, "carbs": 5, "fat": 28, "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Shredded Chicken", "quantity": "120g"}, {"name": "Mayonnaise", "quantity": "2 tbsp"}, {"name": "Celery", "quantity": "1 stalk"}, {"name": "Lettuce Cups", "quantity": "3-4"}],
+    "instructions": ["Mix chicken, mayo, and diced celery.", "Spoon into lettuce cups."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_89", "name": "Vegan Burrito Bowl", "category": "lunch", "calories": 500, "protein": 20, "carbs": 75, "fat": 15, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Brown Rice", "quantity": "1 cup"}, {"name": "Black Beans", "quantity": "1/2 cup"}, {"name": "Corn Salsa", "quantity": "1/4 cup"}, {"name": "Guacamole", "quantity": "2 tbsp"}],
+    "instructions": ["Layer rice, beans, and salsa in a bowl.", "Top with guacamole."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_90", "name": "Greek Chicken Pita", "category": "lunch", "calories": 480, "protein": 35, "carbs": 40, "fat": 20, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Pita Bread", "quantity": "1"}, {"name": "Grilled Chicken", "quantity": "120g"}, {"name": "Tzatziki Sauce", "quantity": "2 tbsp"}, {"name": "Lettuce & Tomato", "quantity": "1/2 cup"}],
+    "instructions": ["Warm pita.", "Fill with chicken, lettuce, tomato, and tzatziki sauce."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_91", "name": "Cold Soba Noodle Salad", "category": "lunch", "calories": 420, "protein": 15, "carbs": 60, "fat": 14, "diet": "vegan", "allergens": ["gluten", "soy"],
+    "ingredients": [{"name": "Soba Noodles", "quantity": "100g"}, {"name": "Edamame", "quantity": "1/2 cup"}, {"name": "Sesame Dressing", "quantity": "2 tbsp"}],
+    "instructions": ["Cook soba noodles and rinse with cold water.", "Toss with edamame and sesame dressing."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_92", "name": "Meatball Sub", "category": "lunch", "calories": 600, "protein": 30, "carbs": 60, "fat": 28, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Sub Roll", "quantity": "1"}, {"name": "Meatballs", "quantity": "4"}, {"name": "Marinara Sauce", "quantity": "1/2 cup"}, {"name": "Provolone Cheese", "quantity": "1 slice"}],
+    "instructions": ["Heat meatballs in marinara sauce.", "Place in a sub roll and top with cheese.", "Toast until cheese is melted."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_93", "name": "Antipasto Salad", "category": "lunch", "calories": 450, "protein": 25, "carbs": 15, "fat": 32, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Salami", "quantity": "50g"}, {"name": "Provolone", "quantity": "50g"}, {"name": "Olives", "quantity": "1/4 cup"}, {"name": "Artichoke Hearts", "quantity": "1/4 cup"}],
+    "instructions": ["Chop meats and cheeses.", "Toss with olives, artichoke hearts, and an Italian vinaigrette."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_94", "name": "Falafel Pita", "category": "lunch", "calories": 480, "protein": 15, "carbs": 65, "fat": 18, "diet": "vegan", "allergens": ["gluten"],
+    "ingredients": [{"name": "Pita Bread", "quantity": "1"}, {"name": "Falafel Balls", "quantity": "4"}, {"name": "Hummus", "quantity": "2 tbsp"}, {"name": "Cucumber & Tomato Salad", "quantity": "1/2 cup"}],
+    "instructions": ["Warm pita.", "Fill with falafel, hummus, and salad."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_95", "name": "Philly Cheesesteak Bowl", "category": "lunch", "calories": 520, "protein": 35, "carbs": 30, "fat": 30, "diet": "none", "allergens": ["dairy"],
+    "ingredients": [{"name": "Shaved Steak", "quantity": "150g"}, {"name": "Onions & Peppers", "quantity": "1 cup"}, {"name": "Provolone Cheese", "quantity": "2 slices"}, {"name": "Rice", "quantity": "1/2 cup"}],
+    "instructions": ["Sauté steak, onions, and peppers.", "Top with cheese and let it melt.", "Serve over a bed of rice."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_96", "name": "Spring Rolls", "category": "lunch", "calories": 350, "protein": 15, "carbs": 45, "fat": 12, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Rice Paper Wrappers", "quantity": "3"}, {"name": "Cooked Rice Noodles", "quantity": "1/2 cup"}, {"name": "Shrimp or Tofu", "quantity": "80g"}, {"name": "Fresh Mint & Cilantro", "quantity": "1/4 cup"}],
+    "instructions": ["Soften rice paper in water.", "Fill with noodles, protein, and herbs.", "Roll tightly and serve with peanut sauce."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_97", "name": "Club Sandwich", "category": "lunch", "calories": 600, "protein": 35, "carbs": 45, "fat": 30, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Toasted Bread", "quantity": "3 slices"}, {"name": "Turkey", "quantity": "80g"}, {"name": "Bacon", "quantity": "3 slices"}, {"name": "Lettuce & Tomato", "quantity": "1/2 cup"}],
+    "instructions": ["Layer turkey, bacon, lettuce, and tomato between three slices of toasted bread.", "Secure with toothpicks and slice diagonally."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_98", "name": "Sausage and Kale Soup", "category": "lunch", "calories": 450, "protein": 25, "carbs": 20, "fat": 30, "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Italian Sausage", "quantity": "100g"}, {"name": "Kale", "quantity": "1 cup"}, {"name": "Chicken Broth", "quantity": "2 cups"}, {"name": "Heavy Cream", "quantity": "1/4 cup"}],
+    "instructions": ["Brown sausage.", "Add broth and kale, simmer until kale is tender.", "Stir in heavy cream."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_99", "name": "BBQ Pulled Pork Sandwich", "category": "lunch", "calories": 550, "protein": 30, "carbs": 55, "fat": 22, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Pulled Pork", "quantity": "150g"}, {"name": "BBQ Sauce", "quantity": "1/4 cup"}, {"name": "Bun", "quantity": "1"}, {"name": "Coleslaw", "quantity": "1/4 cup"}],
+    "instructions": ["Heat pulled pork with BBQ sauce.", "Serve on a bun, topped with coleslaw."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_100", "name": "Fish Tacos", "category": "lunch", "calories": 480, "protein": 30, "carbs": 40, "fat": 22, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Grilled Cod", "quantity": "120g"}, {"name": "Corn Tortillas", "quantity": "3"}, {"name": "Cabbage Slaw", "quantity": "1/2 cup"}, {"name": "Chipotle Aioli", "quantity": "1 tbsp"}],
+    "instructions": ["Flake grilled fish.", "Fill warm tortillas with fish and slaw.", "Drizzle with aioli."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_101", "name": "Vegan Mac and Cheese", "category": "lunch", "calories": 520, "protein": 20, "carbs": 70, "fat": 18, "diet": "vegan", "allergens": ["gluten", "nuts"],
+    "ingredients": [{"name": "Pasta", "quantity": "1 cup"}, {"name": "Cashews", "quantity": "1/2 cup"}, {"name": "Nutritional Yeast", "quantity": "1/4 cup"}],
+    "instructions": ["Cook pasta.", "Blend soaked cashews with nutritional yeast and water to make a cheese sauce.", "Toss with cooked pasta."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_102", "name": "Shepherd's Pie Stuffed Potato", "category": "lunch", "calories": 550, "protein": 28, "carbs": 50, "fat": 25, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Baked Potato", "quantity": "1 large"}, {"name": "Ground Lamb", "quantity": "100g"}, {"name": "Mixed Veggies", "quantity": "1/2 cup"}],
+    "instructions": ["Bake potato until tender.", "Cook ground lamb with veggies.", "Split potato and stuff with the lamb mixture."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_103", "name": "Keto Pizza Bowl", "category": "lunch", "calories": 480, "protein": 30, "carbs": 12, "fat": 35, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Pepperoni", "quantity": "50g"}, {"name": "Sausage", "quantity": "50g"}, {"name": "Low-Carb Marinara", "quantity": "1/4 cup"}, {"name": "Mozzarella", "quantity": "1/2 cup"}],
+    "instructions": ["Layer ingredients in a bowl.", "Microwave or bake until cheese is melted and bubbly."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_104", "name": "Curry Chicken Salad", "category": "lunch", "calories": 460, "protein": 35, "carbs": 15, "fat": 28, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Shredded Chicken", "quantity": "120g"}, {"name": "Paleo Mayo", "quantity": "2 tbsp"}, {"name": "Curry Powder", "quantity": "1 tsp"}, {"name": "Raisins", "quantity": "1 tbsp"}],
+    "instructions": ["Mix all ingredients together.", "Serve on its own or in lettuce cups."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_105", "name": "Bento Box", "category": "lunch", "calories": 500, "protein": 25, "carbs": 50, "fat": 22, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Rice Ball", "quantity": "1"}, {"name": "Teriyaki Chicken", "quantity": "80g"}, {"name": "Edamame", "quantity": "1/4 cup"}, {"name": "Pickled Ginger", "quantity": "1 tsp"}],
+    "instructions": ["Arrange all components neatly in a compartmentalized lunch box."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_106", "name": "White Bean and Tuna Salad", "category": "lunch", "calories": 420, "protein": 30, "carbs": 40, "fat": 15, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Canned Tuna", "quantity": "1 can"}, {"name": "Cannellini Beans", "quantity": "1/2 cup"}, {"name": "Red Onion", "quantity": "1/4"}, {"name": "Olive Oil", "quantity": "1 tbsp"}],
+    "instructions": ["Combine all ingredients and toss gently."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_107", "name": "Reuben Sandwich", "category": "lunch", "calories": 600, "protein": 25, "carbs": 45, "fat": 35, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Rye Bread", "quantity": "2 slices"}, {"name": "Corned Beef", "quantity": "100g"}, {"name": "Sauerkraut", "quantity": "1/4 cup"}, {"name": "Swiss Cheese", "quantity": "1 slice"}, {"name": "Thousand Island Dressing", "quantity": "1 tbsp"}],
+    "instructions": ["Layer ingredients on bread.", "Grill in a buttered pan until golden brown and cheese is melted."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_108", "name": "Vegan Lentil Shepherd's Pie", "category": "lunch", "calories": 500, "protein": 22, "carbs": 70, "fat": 12, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Cooked Lentils", "quantity": "1 cup"}, {"name": "Mixed Veggies", "quantity": "1/2 cup"}, {"name": "Mashed Sweet Potato", "quantity": "1 cup"}],
+    "instructions": ["Place lentil and veggie mixture in a ramekin.", "Top with mashed sweet potato.", "Bake at 180C for 20 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_109", "name": "Keto Salmon Patties", "category": "lunch", "calories": 450, "protein": 30, "carbs": 3, "fat": 35, "diet": "keto", "allergens": [],
+    "ingredients": [{"name": "Canned Salmon", "quantity": "1 can"}, {"name": "Egg", "quantity": "1"}, {"name": "Almond Flour", "quantity": "2 tbsp"}],
+    "instructions": ["Mix all ingredients.", "Form into patties.", "Pan-fry in oil until golden brown."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_110", "name": "Chicken Gyro", "category": "lunch", "calories": 520, "protein": 38, "carbs": 45, "fat": 20, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Pita Bread", "quantity": "1"}, {"name": "Chicken Gyro Meat", "quantity": "120g"}, {"name": "Tzatziki", "quantity": "2 tbsp"}, {"name": "Onion & Tomato", "quantity": "1/4 cup"}],
+    "instructions": ["Warm pita.", "Fill with chicken and toppings."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_111", "name": "Miso Soup with Tofu", "category": "lunch", "calories": 250, "protein": 15, "carbs": 15, "fat": 15, "diet": "vegan", "allergens": ["soy"],
+    "ingredients": [{"name": "Dashi Broth", "quantity": "2 cups"}, {"name": "Miso Paste", "quantity": "2 tbsp"}, {"name": "Silken Tofu", "quantity": "100g"}, {"name": "Seaweed", "quantity": "1 tbsp"}],
+    "instructions": ["Bring dashi to a simmer.", "Whisk in miso paste.", "Add cubed tofu and seaweed."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_112", "name": "Italian Chopped Salad", "category": "lunch", "calories": 480, "protein": 25, "carbs": 15, "fat": 35, "diet": "none", "allergens": ["dairy"],
+    "ingredients": [{"name": "Romaine", "quantity": "2 cups"}, {"name": "Salami", "quantity": "50g"}, {"name": "Chickpeas", "quantity": "1/4 cup"}, {"name": "Provolone", "quantity": "30g"}],
+    "instructions": ["Chop all ingredients.", "Toss with an Italian vinaigrette."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_113", "name": "Leftover Chili", "category": "lunch", "calories": 450, "protein": 30, "carbs": 40, "fat": 18, "diet": "none", "allergens": [],
+    "ingredients": [{"name": "Chili", "quantity": "1.5 cups"}, {"name": "Shredded Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Reheat chili.", "Top with shredded cheese."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_114", "name": "Paleo Chicken Tenders", "category": "lunch", "calories": 400, "protein": 35, "carbs": 10, "fat": 22, "diet": "paleo", "allergens": ["nuts"],
+    "ingredients": [{"name": "Chicken Tenders", "quantity": "150g"}, {"name": "Almond Flour", "quantity": "1/4 cup"}, {"name": "Egg", "quantity": "1"}],
+    "instructions": ["Dredge chicken in egg, then in almond flour.", "Bake or air fry until golden and cooked through."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_115", "name": "Gado-Gado Salad", "category": "lunch", "calories": 500, "protein": 25, "carbs": 40, "fat": 28, "diet": "vegan", "allergens": ["nuts", "soy"],
+    "ingredients": [{"name": "Steamed Vegetables", "quantity": "1 cup"}, {"name": "Fried Tofu", "quantity": "100g"}, {"name": "Hard Boiled Egg (optional)", "quantity": "1"}, {"name": "Peanut Sauce", "quantity": "1/4 cup"}],
+    "instructions": ["Arrange vegetables and tofu on a plate.", "Drizzle generously with peanut sauce."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_116", "name": "Sloppy Joes", "category": "lunch", "calories": 480, "protein": 28, "carbs": 45, "fat": 20, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Ground Beef", "quantity": "120g"}, {"name": "Manwich Sauce", "quantity": "1/2 cup"}, {"name": "Hamburger Bun", "quantity": "1"}],
+    "instructions": ["Brown ground beef and drain.", "Stir in sauce and simmer.", "Serve on a bun."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_117", "name": "Sheet Pan Lemon Herb Chicken & Veggies", "category": "dinner", "calories": 580, "protein": 45, "carbs": 40, "fat": 28, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Chicken Thighs", "quantity": "200g"}, {"name": "Baby Potatoes", "quantity": "150g"}, {"name": "Green Beans", "quantity": "100g"}, {"name": "Lemon", "quantity": "1"}],
+    "instructions": ["Toss all ingredients with olive oil, lemon juice, and herbs.", "Spread on a sheet pan.", "Roast at 200C for 30-35 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_118", "name": "Classic Spaghetti Bolognese", "category": "dinner", "calories": 650, "protein": 35, "carbs": 80, "fat": 22, "diet": "none", "allergens": ["gluten"],
+    "ingredients": [{"name": "Ground Beef", "quantity": "120g"}, {"name": "Spaghetti", "quantity": "100g"}, {"name": "Tomato Sauce", "quantity": "1 cup"}, {"name": "Onion & Garlic", "quantity": "1/2 cup"}],
+    "instructions": ["Brown beef with onion and garlic.", "Add tomato sauce and simmer for at least 30 minutes.", "Serve over cooked spaghetti."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_119", "name": "Vegan Coconut Chickpea Curry", "category": "dinner", "calories": 550, "protein": 20, "carbs": 70, "fat": 22, "diet": "vegan", "allergens": [],
+    "ingredients": [{"name": "Chickpeas", "quantity": "1 can"}, {"name": "Coconut Milk", "quantity": "1/2 can"}, {"name": "Spinach", "quantity": "2 cups"}, {"name": "Curry Powder", "quantity": "1 tbsp"}, {"name": "Rice", "quantity": "1/2 cup"}],
+    "instructions": ["Sauté onions and garlic, add curry powder.", "Stir in coconut milk and chickpeas, simmer for 15 mins.", "Wilt in spinach and serve over rice."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_120", "name": "Keto Zucchini Lasagna", "category": "dinner", "calories": 520, "protein": 38, "carbs": 15, "fat": 35, "diet": "keto", "allergens": ["dairy"],
+    "ingredients": [{"name": "Zucchini", "quantity": "1 large"}, {"name": "Ground Beef", "quantity": "150g"}, {"name": "Ricotta Cheese", "quantity": "1/2 cup"}, {"name": "Mozzarella", "quantity": "1/2 cup"}],
+    "instructions": ["Slice zucchini into thin planks.", "Layer zucchini with cooked ground beef, ricotta, and mozzarella.", "Bake at 180C for 30 minutes."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_121", "name": "Pesto Pasta with Cherry Tomatoes", "category": "dinner", "calories": 580, "protein": 20, "carbs": 85, "fat": 20, "diet": "none", "allergens": ["gluten", "dairy", "nuts"],
+    "ingredients": [{"name": "Penne Pasta", "quantity": "100g"}, {"name": "Pesto Sauce", "quantity": "1/4 cup"}, {"name": "Cherry Tomatoes", "quantity": "1 cup"}, {"name": "Parmesan Cheese", "quantity": "2 tbsp"}],
+    "instructions": ["Cook pasta according to package directions.", "Toss hot pasta with pesto and halved cherry tomatoes.", "Top with parmesan cheese."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_122", "name": "Chicken and Black Bean Enchiladas", "category": "dinner", "calories": 600, "protein": 40, "carbs": 60, "fat": 22, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Shredded Chicken", "quantity": "120g"}, {"name": "Black Beans", "quantity": "1/2 cup"}, {"name": "Corn Tortillas", "quantity": "3"}, {"name": "Enchilada Sauce", "quantity": "1/2 cup"}, {"name": "Cheese", "quantity": "1/4 cup"}],
+    "instructions": ["Mix chicken and beans, fill tortillas.", "Roll up and place in a baking dish.", "Top with sauce and cheese, bake at 180C for 20 mins."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_123", "name": "Paleo Shepherd's Pie", "category": "dinner", "calories": 550, "protein": 35, "carbs": 35, "fat": 30, "diet": "paleo", "allergens": [],
+    "ingredients": [{"name": "Ground Lamb", "quantity": "150g"}, {"name": "Mixed Vegetables", "quantity": "1 cup"}, {"name": "Mashed Cauliflower", "quantity": "1.5 cups"}],
+    "instructions": ["Brown lamb with vegetables.", "Place in a baking dish.", "Top with mashed cauliflower and bake at 200C until golden."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_124", "name": "Teriyaki Tofu with Jasmine Rice", "category": "dinner", "calories": 520, "protein": 25, "carbs": 70, "fat": 15, "diet": "vegan", "allergens": ["soy", "gluten"],
+    "ingredients": [{"name": "Firm Tofu", "quantity": "150g"}, {"name": "Teriyaki Sauce", "quantity": "1/4 cup"}, {"name": "Jasmine Rice", "quantity": "1 cup cooked"}, {"name": "Broccoli", "quantity": "1 cup"}],
+    "instructions": ["Pan-fry cubed tofu until golden.", "Add teriyaki sauce and simmer.", "Serve over rice with steamed broccoli."], "approved": true, "custom": false
+  },
+  {
+    "id": "recipe_125", "name": "Beef Tacos", "category": "dinner", "calories": 580, "protein": 30, "carbs": 40, "fat": 30, "diet": "none", "allergens": ["gluten", "dairy"],
+    "ingredients": [{"name": "Ground Beef", "quantity": "120g"}, {"name": "Taco Seasoning", "quantity": "1 tbsp"}, {"name": "Hard Taco Shells", "quantity": "3"}, {"name": "Lettuce, Tomato, Cheese", "quantity": "1/2 cup"}],
+    "instructions": ["Brown beef and mix with taco seasoning.", "Fill shells with beef and top with lettuce, tomato, and cheese."], "approved": true, "custom": false
+  }
+]
