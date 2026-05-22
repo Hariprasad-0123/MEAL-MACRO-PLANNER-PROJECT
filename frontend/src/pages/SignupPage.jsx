@@ -352,22 +352,7 @@ export default function SignupPage() {
                   </div>
                 </div>
 
-                {/* Terms & Privacy checkbox */}
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', padding: '4px 0' }}>
-                  <input 
-                    type="checkbox" 
-                    id="terms" 
-                    className="form-checkbox"
-                    style={{ marginTop: '3px', cursor: 'pointer' }}
-                    required
-                  />
-                  <label htmlFor="terms" style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4', cursor: 'pointer' }}>
-                    I agree to the{' '}
-                    <span style={{ color: 'var(--accent-indigo)', textDecoration: 'none', fontWeight: 600 }} className="neon-text-cyan">Terms of Service</span>
-                    {' '}and{' '}
-                    <span style={{ color: 'var(--accent-indigo)', textDecoration: 'none', fontWeight: 600 }} className="neon-text-cyan">Privacy Policy</span>.
-                  </label>
-                </div>
+
 
                 {/* Submit button */}
                 <button 
