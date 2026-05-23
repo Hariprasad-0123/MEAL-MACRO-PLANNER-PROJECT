@@ -485,6 +485,11 @@ p {
   .recipes-view-grid:not(.show-saved) .recipe-panel-saved {
     display: none !important;
   }
+
+  .coach-hub-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
 }
 
 .mobile-header {
@@ -760,4 +765,12 @@ input:checked + .toggle-slider:before {
 }
 [data-theme="dark"] .coach-lock-overlay {
   background: rgba(15, 22, 42, 0.85);
+}
+
+/* Coach Hub Premium Layout Grid */
+.coach-hub-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 30px;
+  align-items: start;
 }

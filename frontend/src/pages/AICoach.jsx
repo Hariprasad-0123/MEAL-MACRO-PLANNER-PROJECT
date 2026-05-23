@@ -16,7 +16,7 @@ export default function AICoach({
       <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-display)', fontWeight: 800, marginBottom: '8px' }}>AI Nutrition Coach</h2>
       <p style={{ marginBottom: '32px' }}>Unlock expert coach feedback, daily review analysis, and premium features.</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '30px', alignItems: 'start' }} className="coach-hub-grid">
+      <div className="coach-hub-grid">
         
         {/* Left Side: Coach Chat (Locked for non-premium) */}
         <div className="flat-panel" style={{ padding: '24px', position: 'relative', minHeight: '400px', display: 'flex', flexDirection: 'column' }}>
