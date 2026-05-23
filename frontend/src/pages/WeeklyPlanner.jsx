@@ -58,6 +58,70 @@ export default function WeeklyPlanner({
   const pendingGroceries = groceryList.filter(item => !pantry.includes(item.id)).length;
   const completedGroceries = groceryList.filter(item => pantry.includes(item.id)).length;
 
+  // Touch Swipe Gesture Navigation specifically for Weekly Meal Planner Sub-Tabs
+  React.useEffect(() => {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    };
+
+    const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    };
+
+    const handleSwipe = () => {
+      // Do not swipe if user is typing in inputs or searching groceries
+      const activeElement = document.activeElement;
+      if (
+        activeElement && 
+        (activeElement.tagName === 'INPUT' || 
+         activeElement.tagName === 'TEXTAREA' || 
+         activeElement.tagName === 'SELECT' || 
+         activeElement.isContentEditable)
+      ) {
+        return;
+      }
+
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      
+      // Swipe threshold: 75px. Must be wider than vertical scrolling.
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 75) {
+        const subTabs = ['calendar', 'generate', 'grocery'];
+        const currentIndex = subTabs.indexOf(plannerSubTab);
+        
+        if (currentIndex !== -1) {
+          if (diffX < 0) {
+            // Swiped Left -> Move Next
+            if (currentIndex < subTabs.length - 1) {
+              setPlannerSubTab(subTabs[currentIndex + 1]);
+            }
+          } else {
+            // Swiped Right -> Move Previous
+            if (currentIndex > 0) {
+              setPlannerSubTab(subTabs[currentIndex - 1]);
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [plannerSubTab]);
+
   return (
     <div className="animate-fade-in" style={{ paddingBottom: '40px' }}>
       {/* Header section */}
