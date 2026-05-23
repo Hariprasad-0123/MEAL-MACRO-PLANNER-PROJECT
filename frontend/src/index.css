@@ -448,6 +448,18 @@ p {
     padding-bottom: 90px;
     max-height: none;
   }
+
+  .mobile-header {
+    display: flex !important;
+  }
+
+  .mobile-nav-bar {
+    display: flex !important;
+  }
+}
+
+.mobile-header {
+  display: none;
 }
 
 .mobile-nav-bar {
@@ -457,7 +469,7 @@ p {
   right: 0;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-glass);
-  display: flex;
+  display: none;
   justify-content: space-around;
   padding: 12px 6px;
   z-index: 100;

@@ -231,27 +231,17 @@ export default function App() {
         body: JSON.stringify(updatedProfile)
       });
       if (res.ok) {
-        showToast('Profile updated successfully! Re-authenticating...', 'success');
-        localStorage.removeItem('mmp_authenticated');
-        setTimeout(() => {
-          navigate('/login');
-        }, 1200);
+        showToast('Profile updated successfully!', 'success');
       }
     } catch {
-      showToast('Profile saved locally! Re-authenticating...', 'success');
-      localStorage.removeItem('mmp_authenticated');
-      setTimeout(() => {
-        navigate('/login');
-      }, 1200);
+      showToast('Profile saved locally!', 'success');
     }
   };
 
   const handleEditProfileRedirect = () => {
-    localStorage.removeItem('mmp_authenticated');
-    showToast('Redirecting to secure login to edit profile...', 'info');
+    setActiveTab('profile');
     setIsUserMenuOpen(false);
     setIsMobileMenuOpen(false);
-    navigate('/login');
   };
 
   async function fetchRecipes() {
@@ -1600,7 +1590,7 @@ export default function App() {
       <main className="dashboard-content">
         
         {/* Mobile Header / Navigation */}
-        <header style={{ display: 'none', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }} className="mobile-header">
+        <header style={{ justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }} className="mobile-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <div 
               style={{
@@ -1798,7 +1788,7 @@ export default function App() {
       </main>
 
       {/* Mobile Navigation Bar */}
-      <nav className="mobile-nav-bar" style={{ display: 'none' }}>
+      <nav className="mobile-nav-bar">
         <a onClick={() => setActiveTab('dashboard')} className={`mobile-nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}>
           <Utensils size={20} /> Diary
         </a>
