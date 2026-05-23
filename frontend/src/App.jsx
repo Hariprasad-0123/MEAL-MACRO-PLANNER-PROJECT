@@ -849,14 +849,18 @@ export default function App() {
 
   const activeStreak = calculateStreak();
 
-  const handleAutoGeneratePlan = () => {
+  const handleAutoGeneratePlan = (customFilters = {}) => {
     const newWeeklyPlan = { ...weeklyPlan };
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     
+    const activeProfile = {
+      ...profile,
+      dietPreference: customFilters.dietPreference || profile.dietPreference,
+      allergies: customFilters.allergies || profile.allergies
+    };
+
     days.forEach(day => {
-      // Note: This uses the target calories for the *currently selected* date for all days.
-      // A more advanced implementation would calculate targets for each specific day of the week.
-      newWeeklyPlan[day] = generateMealPlanForDay(targets.calories, recipes, profile);
+      newWeeklyPlan[day] = generateMealPlanForDay(targets.calories, recipes, activeProfile);
     });
 
     saveWeeklyPlan(newWeeklyPlan);
