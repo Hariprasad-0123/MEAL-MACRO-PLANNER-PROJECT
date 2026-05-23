@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Dumbbell, Calendar, Utensils, BookOpen, BarChart2, User, 
   Camera, ShieldAlert, Bot, Sparkles, Menu, X, 
-  Sun, Moon, Database, LogOut
+  Sun, Moon, Database, LogOut, ArrowLeft
 } from 'lucide-react';
 import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import LandingPage from './pages/LandingPage.jsx';
@@ -1633,6 +1633,85 @@ export default function App() {
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </header>
+
+        {/* Global Back Navigation Header Action Bar */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: '20.5px',
+          background: 'rgba(255, 255, 255, 0.02)',
+          border: '1px solid var(--border-glass)',
+          borderRadius: '12.5px',
+          padding: '10px 16px',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
+        }}>
+          {activeTab === 'dashboard' ? (
+            <button
+              onClick={() => {
+                localStorage.removeItem('mmp_authenticated');
+                navigate('/');
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'transparent',
+                border: 'none',
+                color: 'var(--text-secondary)',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                padding: '4px 8px',
+                borderRadius: '8px'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.background = 'transparent'; }}
+            >
+              <ArrowLeft size={16} /> Back to Home
+            </button>
+          ) : (
+            <button
+              onClick={() => setActiveTab('dashboard')}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'transparent',
+                border: 'none',
+                color: 'var(--accent-cyan)',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                padding: '4px 8px',
+                borderRadius: '8px'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--accent-cyan)'; e.currentTarget.style.background = 'transparent'; }}
+            >
+              <ArrowLeft size={16} /> Back to Dashboard
+            </button>
+          )}
+
+          {/* View Indicator Pill */}
+          <div style={{
+            fontSize: '0.72rem',
+            color: 'var(--text-muted)',
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            background: 'rgba(255, 255, 255, 0.04)',
+            padding: '4px 10px',
+            borderRadius: '20px',
+            border: '1px solid var(--border-glass)'
+          }}>
+            {activeTab === 'dashboard' ? 'Overview' : activeTab}
+          </div>
+        </div>
 
         {isMobileMenuOpen && (
           <div style={{
