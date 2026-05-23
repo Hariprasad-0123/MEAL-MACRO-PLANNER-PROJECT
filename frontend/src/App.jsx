@@ -1634,19 +1634,12 @@ export default function App() {
           </button>
         </header>
 
-        {/* Global Back Navigation Header Action Bar */}
+        {/* Sleek Top-Left Circular Back Arrow Option */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '20.5px',
-          background: 'rgba(255, 255, 255, 0.02)',
-          border: '1px solid var(--border-glass)',
-          borderRadius: '12.5px',
-          padding: '10px 16px',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
+          gap: '12px',
+          marginBottom: '20px'
         }}>
           {activeTab === 'dashboard' ? (
             <button
@@ -1657,21 +1650,33 @@ export default function App() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                border: 'none',
+                justifyContent: 'center',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid var(--border-glass)',
                 color: 'var(--text-secondary)',
-                fontSize: '0.85rem',
-                fontWeight: 600,
                 cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                padding: '4px 8px',
-                borderRadius: '8px'
+                transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                outline: 'none'
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.background = 'transparent'; }}
+              onMouseEnter={(e) => { 
+                e.currentTarget.style.color = '#ffffff'; 
+                e.currentTarget.style.background = 'rgba(239, 68, 68, 0.2)'; 
+                e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                e.currentTarget.style.boxShadow = '0 0 12px rgba(239, 68, 68, 0.35)';
+              }}
+              onMouseLeave={(e) => { 
+                e.currentTarget.style.color = 'var(--text-secondary)'; 
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; 
+                e.currentTarget.style.borderColor = 'var(--border-glass)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+              }}
+              title="Back to Home Splash"
             >
-              <ArrowLeft size={16} /> Back to Home
+              <ArrowLeft size={20} />
             </button>
           ) : (
             <button
@@ -1679,38 +1684,50 @@ export default function App() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                border: 'none',
+                justifyContent: 'center',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid var(--border-glass)',
                 color: 'var(--accent-cyan)',
-                fontSize: '0.85rem',
-                fontWeight: 600,
                 cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                padding: '4px 8px',
-                borderRadius: '8px'
+                transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                outline: 'none'
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--accent-cyan)'; e.currentTarget.style.background = 'transparent'; }}
+              onMouseEnter={(e) => { 
+                e.currentTarget.style.color = '#ffffff'; 
+                e.currentTarget.style.background = 'rgba(0, 242, 254, 0.15)'; 
+                e.currentTarget.style.borderColor = 'var(--accent-cyan)';
+                e.currentTarget.style.boxShadow = '0 0 12px rgba(0, 242, 254, 0.45)';
+              }}
+              onMouseLeave={(e) => { 
+                e.currentTarget.style.color = 'var(--accent-cyan)'; 
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; 
+                e.currentTarget.style.borderColor = 'var(--border-glass)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+              }}
+              title="Back to Dashboard"
             >
-              <ArrowLeft size={16} /> Back to Dashboard
+              <ArrowLeft size={20} />
             </button>
           )}
 
-          {/* View Indicator Pill */}
-          <div style={{
-            fontSize: '0.72rem',
-            color: 'var(--text-muted)',
-            fontWeight: 700,
+          {/* Context view label next to back arrow */}
+          <span style={{
+            fontSize: '0.75rem',
+            fontWeight: 800,
             textTransform: 'uppercase',
             letterSpacing: '0.08em',
-            background: 'rgba(255, 255, 255, 0.04)',
-            padding: '4px 10px',
+            color: 'var(--text-muted)',
+            background: 'rgba(255, 255, 255, 0.03)',
+            padding: '4px 12px',
             borderRadius: '20px',
             border: '1px solid var(--border-glass)'
           }}>
             {activeTab === 'dashboard' ? 'Overview' : activeTab}
-          </div>
+          </span>
         </div>
 
         {isMobileMenuOpen && (
