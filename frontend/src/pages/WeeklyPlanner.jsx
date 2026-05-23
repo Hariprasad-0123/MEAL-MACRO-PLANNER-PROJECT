@@ -132,19 +132,19 @@ export default function WeeklyPlanner({
 
       {/* Premium Segmented Sub-Navigation Bar */}
       <div style={{
-        display: 'flex',
-        gap: '8px',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '4px',
         borderBottom: '1px solid var(--border-glass)',
         paddingBottom: '2px',
-        marginBottom: '24px',
-        overflowX: 'auto'
+        marginBottom: '24px'
       }}>
         {/* Weekly Calendar Tab */}
         <button
           onClick={() => setPlannerSubTab('calendar')}
           style={{
-            padding: '12px 18px',
-            fontSize: '0.9rem',
+            padding: '10px 4px',
+            fontSize: '0.85rem',
             fontWeight: plannerSubTab === 'calendar' ? '600' : '500',
             border: 'none',
             borderBottom: plannerSubTab === 'calendar' ? '3px solid var(--accent-cyan)' : '3px solid transparent',
@@ -153,20 +153,21 @@ export default function WeeklyPlanner({
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            justifyContent: 'center',
+            gap: '6px',
             transition: 'all 0.2s ease',
             whiteSpace: 'nowrap'
           }}
         >
-          <Calendar size={16} />
-          <span>Meal Calendar</span>
+          <Calendar size={15} />
+          <span>Calendar</span>
           {totalMealsScheduled > 0 && (
             <span style={{
-              fontSize: '0.7rem',
+              fontSize: '0.65rem',
               background: plannerSubTab === 'calendar' ? 'var(--accent-cyan)' : 'rgba(255,255,255,0.08)',
               color: plannerSubTab === 'calendar' ? '#0f172a' : 'var(--text-muted)',
-              padding: '1px 6px',
-              borderRadius: '10px',
+              padding: '1px 5px',
+              borderRadius: '8px',
               fontWeight: 700
             }}>{totalMealsScheduled}</span>
           )}
@@ -176,8 +177,8 @@ export default function WeeklyPlanner({
         <button
           onClick={() => setPlannerSubTab('generate')}
           style={{
-            padding: '12px 18px',
-            fontSize: '0.9rem',
+            padding: '10px 4px',
+            fontSize: '0.85rem',
             fontWeight: plannerSubTab === 'generate' ? '600' : '500',
             border: 'none',
             borderBottom: plannerSubTab === 'generate' ? '3px solid var(--accent-purple)' : '3px solid transparent',
@@ -186,21 +187,22 @@ export default function WeeklyPlanner({
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            justifyContent: 'center',
+            gap: '6px',
             transition: 'all 0.2s ease',
             whiteSpace: 'nowrap'
           }}
         >
-          <Settings size={16} />
-          <span>Generator Options</span>
+          <Settings size={15} />
+          <span>Generator</span>
         </button>
 
         {/* Grocery List Tab */}
         <button
           onClick={() => setPlannerSubTab('grocery')}
           style={{
-            padding: '12px 18px',
-            fontSize: '0.9rem',
+            padding: '10px 4px',
+            fontSize: '0.85rem',
             fontWeight: plannerSubTab === 'grocery' ? '600' : '500',
             border: 'none',
             borderBottom: plannerSubTab === 'grocery' ? '3px solid var(--accent-cyan)' : '3px solid transparent',
@@ -209,20 +211,21 @@ export default function WeeklyPlanner({
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            justifyContent: 'center',
+            gap: '6px',
             transition: 'all 0.2s ease',
             whiteSpace: 'nowrap'
           }}
         >
-          <ShoppingCart size={16} />
-          <span>Grocery List</span>
+          <ShoppingCart size={15} />
+          <span>Groceries</span>
           {pendingGroceries > 0 && (
             <span style={{
-              fontSize: '0.7rem',
+              fontSize: '0.65rem',
               background: 'var(--accent-purple)',
               color: '#ffffff',
-              padding: '1px 6px',
-              borderRadius: '10px',
+              padding: '1px 5px',
+              borderRadius: '8px',
               fontWeight: 700
             }}>{pendingGroceries}</span>
           )}
