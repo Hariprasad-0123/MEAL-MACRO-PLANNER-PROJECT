@@ -443,6 +443,76 @@ export default function App() {
   }, [currentDate]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
+  // Touch Swipe Gesture Navigation for Mobile Dashboard Views
+  useEffect(() => {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    };
+
+    const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipeGesture();
+    };
+
+    const handleSwipeGesture = () => {
+      // Avoid swipe navigation if user is not authenticated or not on dashboard page
+      const isAuthenticated = localStorage.getItem('mmp_authenticated') === 'true';
+      if (!isAuthenticated) return;
+
+      // Do not swipe if user is typing in inputs or textareas
+      const activeElement = document.activeElement;
+      if (
+        activeElement && 
+        (activeElement.tagName === 'INPUT' || 
+         activeElement.tagName === 'TEXTAREA' || 
+         activeElement.tagName === 'SELECT' || 
+         activeElement.isContentEditable)
+      ) {
+        return;
+      }
+
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      
+      // Horizontal swipe threshold: 75px. Must be wider than vertical scrolling movement.
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 75) {
+        const tabs = ['dashboard', 'mealplan', 'recipes', 'analytics', 'profile'];
+        const currentIndex = tabs.indexOf(activeTab);
+        
+        if (currentIndex !== -1) {
+          if (diffX < 0) {
+            // Swiped Left -> Move Next (Dashboard -> Mealplan -> Recipes -> Analytics -> Profile)
+            if (currentIndex < tabs.length - 1) {
+              const nextTab = tabs[currentIndex + 1];
+              setActiveTab(nextTab);
+            }
+          } else {
+            // Swiped Right -> Move Prev (Profile -> Analytics -> Recipes -> Mealplan -> Dashboard)
+            if (currentIndex > 0) {
+              const prevTab = tabs[currentIndex - 1];
+              setActiveTab(prevTab);
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [activeTab]);
+
   // Submit new recipe (User / Admin)
   const handleCreateRecipe = async (e) => {
     e.preventDefault();

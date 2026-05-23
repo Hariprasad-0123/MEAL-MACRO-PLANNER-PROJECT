@@ -456,6 +456,14 @@ p {
   .mobile-nav-bar {
     display: flex !important;
   }
+
+  .recipes-view-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-grid-layout {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .mobile-header {
