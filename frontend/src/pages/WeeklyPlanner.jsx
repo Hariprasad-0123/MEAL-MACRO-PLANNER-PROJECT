@@ -40,12 +40,8 @@ export default function WeeklyPlanner({
     setPlannerSubTab('calendar');
   };
 
-  // Filter grocery items
+  // Filter grocery items by search criteria only to prevent items disappearing from the view when checked
   const filteredGroceries = groceryList.filter(item => {
-    const isChecked = pantry.includes(item.id);
-    if (groceryStatus === 'pending' && isChecked) return false;
-    if (groceryStatus === 'completed' && !isChecked) return false;
-    
     if (grocerySearch && !item.name.toLowerCase().includes(grocerySearch.toLowerCase())) {
       return false;
     }
@@ -477,13 +473,29 @@ export default function WeeklyPlanner({
               {['Produce', 'Meat/Fish', 'Dairy', 'Bakery', 'Nuts/Seeds', 'Pantry', 'Deli'].map(category => {
                 const categoryItems = filteredGroceries.filter(i => i.category === category);
                 if (categoryItems.length === 0) return null;
+
+                // Sort items: Active (unchecked) first, Completed (checked) last
+                const sortedCategoryItems = [...categoryItems].sort((a, b) => {
+                  const aChecked = pantry.includes(a.id);
+                  const bChecked = pantry.includes(b.id);
+                  return aChecked === bChecked ? 0 : aChecked ? 1 : -1;
+                });
                 
                 return (
                   <div key={category} className="flat-panel" style={{ padding: '16px', background: 'rgba(15,23,42,0.03)' }}>
                     <h4 style={{ borderBottom: '1px solid var(--border-glass)', paddingBottom: '8px', marginBottom: '12px', color: 'var(--accent-purple)', fontSize: '0.95rem', fontWeight: 700 }}>{category}</h4>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      {categoryItems.map(item => {
+                      {sortedCategoryItems.map(item => {
                         const isChecked = pantry.includes(item.id);
+                        
+                        // Calculate opacity based on status selection (dims rather than hides completely for total UI stability)
+                        let opacity = 1.0;
+                        if (groceryStatus === 'pending' && isChecked) {
+                          opacity = 0.35;
+                        } else if (groceryStatus === 'completed' && !isChecked) {
+                          opacity = 0.35;
+                        }
+
                         return (
                           <div
                             key={item.id}
@@ -496,13 +508,15 @@ export default function WeeklyPlanner({
                               fontSize: '0.85rem',
                               color: isChecked ? 'var(--text-muted)' : 'var(--text-primary)',
                               userSelect: 'none',
-                              padding: '4px 0'
+                              padding: '6px 0',
+                              opacity: opacity,
+                              transition: 'opacity 0.25s ease, color 0.25s ease'
                             }}
                           >
                             <span style={{ display: 'inline-flex', color: isChecked ? 'var(--accent-cyan)' : 'var(--text-muted)', transition: 'color 0.2s ease' }}>
                               {isChecked ? <CheckCircle2 size={18} /> : <Circle size={18} />}
                             </span>
-                            <span style={{ textDecoration: isChecked ? 'line-through' : 'none' }}>
+                            <span style={{ textDecoration: isChecked ? 'line-through' : 'none', transition: 'text-decoration 0.2s ease' }}>
                               {item.name} <em style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>({item.quantity})</em>
                             </span>
                           </div>

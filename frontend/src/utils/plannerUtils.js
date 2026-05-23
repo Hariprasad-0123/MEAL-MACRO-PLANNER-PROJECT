@@ -58,17 +58,40 @@ export const generateGroceryList = (weeklyPlan) => {
     
     // Categorize ingredient mapping
     const categoryMapping = {
-      'Oats': 'Pantry', 'Oatmeal': 'Pantry', 'Milk': 'Dairy', 'Protein Powder': 'Pantry',
-      'Bread': 'Bakery', 'Avocado': 'Produce', 'Egg': 'Dairy', 'Eggs': 'Dairy',
-      'Bacon': 'Meat/Fish', 'Cheese': 'Dairy', 'Butter': 'Dairy', 'Banana': 'Produce',
-      'Berries': 'Produce', 'Chicken': 'Meat/Fish', 'Salad': 'Produce', 'Oil': 'Pantry',
-      'Tomato': 'Produce', 'Tomatoes': 'Produce', 'Cucumber': 'Produce', 'Salmon': 'Meat/Fish',
-      'Asparagus': 'Produce', 'Quinoa': 'Pantry', 'Beans': 'Pantry', 'Corn': 'Produce',
-      'Beef': 'Meat/Fish', 'Steak': 'Meat/Fish', 'Broccoli': 'Produce', 'Pepper': 'Produce',
-      'Soy': 'Pantry', 'Rice': 'Pantry', 'Cod': 'Meat/Fish', 'Potato': 'Produce',
-      'Tofu': 'Produce', 'Seeds': 'Pantry', 'Turkey': 'Meat/Fish', 'Onion': 'Produce',
-      'Garlic': 'Produce', 'Yogurt': 'Dairy', 'Honey': 'Pantry', 'Apple': 'Produce',
-      'Almond': 'Nuts/Seeds', 'Hummus': 'Deli', 'Carrot': 'Produce', 'Carrots': 'Produce'
+      // Pantry items
+      'Oats': 'Pantry', 'Oatmeal': 'Pantry', 'Protein': 'Pantry', 'Powder': 'Pantry',
+      'Oil': 'Pantry', 'Honey': 'Pantry', 'Syrup': 'Pantry', 'Granola': 'Pantry',
+      'Chia': 'Pantry', 'Hemp': 'Pantry', 'Quinoa': 'Pantry', 'Beans': 'Pantry',
+      'Flour': 'Pantry', 'Rice': 'Pantry', 'Cinnamon': 'Pantry', 'Paprika': 'Pantry',
+      'Salt': 'Pantry', 'Pepper': 'Pantry', 'Sugar': 'Pantry', 'Cocoa': 'Pantry',
+      'Capers': 'Pantry', 'Soy': 'Pantry',
+      
+      // Bakery items
+      'Bread': 'Bakery', 'Tortilla': 'Bakery', 'Croissant': 'Bakery', 'Bun': 'Bakery', 'Bagel': 'Bakery',
+      
+      // Dairy
+      'Milk': 'Dairy', 'Egg': 'Dairy', 'Eggs': 'Dairy', 'Cheese': 'Dairy', 'Butter': 'Dairy',
+      'Yogurt': 'Dairy', 'Cream': 'Dairy', 'Ricotta': 'Dairy',
+      
+      // Meat & Seafood
+      'Bacon': 'Meat/Fish', 'Chicken': 'Meat/Fish', 'Turkey': 'Meat/Fish', 'Ham': 'Meat/Fish',
+      'Pork': 'Meat/Fish', 'Beef': 'Meat/Fish', 'Steak': 'Meat/Fish', 'Sausage': 'Meat/Fish',
+      'Prosciutto': 'Meat/Fish', 'Salmon': 'Meat/Fish', 'Tuna': 'Meat/Fish', 'Cod': 'Meat/Fish',
+      
+      // Produce
+      'Avocado': 'Produce', 'Banana': 'Produce', 'Berries': 'Produce', 'Blueberries': 'Produce',
+      'Peaches': 'Produce', 'Apple': 'Produce', 'Melon': 'Produce', 'Mango': 'Produce',
+      'Salad': 'Produce', 'Greens': 'Produce', 'Spinach': 'Produce', 'Kale': 'Produce',
+      'Broccoli': 'Produce', 'Lettuce': 'Produce', 'Tomato': 'Produce', 'Tomatoes': 'Produce',
+      'Cucumber': 'Produce', 'Asparagus': 'Produce', 'Onion': 'Produce', 'Garlic': 'Produce',
+      'Carrot': 'Produce', 'Carrots': 'Produce', 'Potato': 'Produce', 'Potatoes': 'Produce',
+      'Squash': 'Produce', 'Scallions': 'Produce', 'Tofu': 'Produce', 'Corn': 'Produce',
+      
+      // Nuts & Seeds
+      'Almond': 'Nuts/Seeds', 'Peanut': 'Nuts/Seeds', 'Nuts': 'Nuts/Seeds', 'Pistachios': 'Nuts/Seeds',
+      
+      // Deli
+      'Hummus': 'Deli', 'Salsa': 'Deli', 'Dressing': 'Deli', 'Sauce': 'Deli', 'Mayonnaise': 'Deli', 'Mustard': 'Deli'
     };
 
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
