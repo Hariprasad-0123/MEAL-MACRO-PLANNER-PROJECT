@@ -36,7 +36,7 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   // Navigation & UI States
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState(() => localStorage.getItem('mmp_active_tab') || 'dashboard');
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -58,6 +58,10 @@ export default function App() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    localStorage.setItem('mmp_active_tab', activeTab);
+  }, [activeTab]);
   
   // App Core Data States
   const [profile, setProfile] = useState(() => {
