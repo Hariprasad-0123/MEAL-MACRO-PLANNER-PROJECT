@@ -19,7 +19,7 @@ export default function WeeklyPlanner({
   const [selectedAllergies, setSelectedAllergies] = useState([]);
   
   // Grocery List Filter States
-  const [groceryStatus, setGroceryStatus] = useState('all'); // all | pending | completed
+  const [groceryStatus, setGroceryStatus] = useState('all'); // all | completed
   const [grocerySearch, setGrocerySearch] = useState('');
 
   const toggleAllergen = (allergen) => {
@@ -399,8 +399,7 @@ export default function WeeklyPlanner({
             <div style={{ display: 'flex', gap: '6px' }}>
               {[
                 { id: 'all', label: 'All Items', count: totalGroceries },
-                { id: 'pending', label: 'To Buy', count: pendingGroceries },
-                { id: 'completed', label: 'Checked', count: completedGroceries }
+                { id: 'completed', label: 'Selected Items', count: completedGroceries }
               ].map(pill => {
                 const active = groceryStatus === pill.id;
                 return (
@@ -490,9 +489,7 @@ export default function WeeklyPlanner({
                         
                         // Calculate opacity based on status selection (dims rather than hides completely for total UI stability)
                         let opacity = 1.0;
-                        if (groceryStatus === 'pending' && isChecked) {
-                          opacity = 0.35;
-                        } else if (groceryStatus === 'completed' && !isChecked) {
+                        if (groceryStatus === 'completed' && !isChecked) {
                           opacity = 0.35;
                         }
 
