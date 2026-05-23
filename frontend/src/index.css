@@ -464,6 +464,27 @@ p {
   .profile-grid-layout {
     grid-template-columns: 1fr !important;
   }
+
+  .recipe-subtabs-control {
+    display: flex !important;
+  }
+
+  .recipes-right-column {
+    display: contents !important;
+  }
+
+  /* Hide panels that aren't active on mobile viewports */
+  .recipes-view-grid:not(.show-browse) .recipe-panel-browse {
+    display: none !important;
+  }
+
+  .recipes-view-grid:not(.show-builder) .recipe-panel-builder {
+    display: none !important;
+  }
+
+  .recipes-view-grid:not(.show-saved) .recipe-panel-saved {
+    display: none !important;
+  }
 }
 
 .mobile-header {

@@ -21,6 +21,7 @@ export default function RecipeLibrary({
 }) {
   const [searchVal, setSearchVal] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
+  const [activeSubTab, setActiveSubTab] = useState('browse'); // 'browse', 'builder', 'saved'
 
   const mealTypes = ['breakfast', 'lunch', 'dinner'];
   const dietTypes = ['vegan', 'keto', 'paleo', 'gluten-free', 'none'];
@@ -118,10 +119,32 @@ export default function RecipeLibrary({
         )}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '24px', alignItems: 'start' }} className="recipes-view-grid">
+      {/* Subtab Segment Control (Mobile / Tablet) */}
+      <div className="recipe-subtabs-control" style={{ display: 'none', background: 'var(--bg-secondary)', padding: '6px', borderRadius: '14px', border: '1px solid var(--border-glass)', marginBottom: '24px', gap: '8px', boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.2)' }}>
+        <button 
+          onClick={() => setActiveSubTab('browse')} 
+          style={{ flex: 1, padding: '10px 16px', borderRadius: '10px', border: 'none', background: activeSubTab === 'browse' ? 'var(--accent-indigo)' : 'none', color: activeSubTab === 'browse' ? '#ffffff' : 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)', boxShadow: activeSubTab === 'browse' ? '0 4px 12px rgba(99, 102, 241, 0.3)' : 'none' }}
+        >
+          📚 Browse
+        </button>
+        <button 
+          onClick={() => setActiveSubTab('builder')} 
+          style={{ flex: 1, padding: '10px 16px', borderRadius: '10px', border: 'none', background: activeSubTab === 'builder' ? 'var(--accent-indigo)' : 'none', color: activeSubTab === 'builder' ? '#ffffff' : 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)', boxShadow: activeSubTab === 'builder' ? '0 4px 12px rgba(99, 102, 241, 0.3)' : 'none' }}
+        >
+          🍳 Builder
+        </button>
+        <button 
+          onClick={() => setActiveSubTab('saved')} 
+          style={{ flex: 1, padding: '10px 16px', borderRadius: '10px', border: 'none', background: activeSubTab === 'saved' ? 'var(--accent-indigo)' : 'none', color: activeSubTab === 'saved' ? '#ffffff' : 'var(--text-secondary)', fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)', boxShadow: activeSubTab === 'saved' ? '0 4px 12px rgba(99, 102, 241, 0.3)' : 'none' }}
+        >
+          ⭐️ Saved & Popular
+        </button>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '24px', alignItems: 'start' }} className={`recipes-view-grid show-${activeSubTab}`}>
         
         {/* Left Side: Recipe Browser */}
-        <div>
+        <div className="recipe-panel-browse">
           <div className="flat-panel" style={{ padding: '20px', marginBottom: '20px', display: 'flex', gap: '12px' }}>
             <input 
               type="text" 
@@ -287,9 +310,9 @@ export default function RecipeLibrary({
         </div>
 
         {/* Right Side: Custom Recipe Builder & Existing Recipes Panel */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }} className="recipes-right-column">
           
-          <aside className="flat-panel" style={{ padding: '24px' }}>
+          <aside className="flat-panel recipe-panel-builder" style={{ padding: '24px' }}>
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
               <Plus size={20} className="neon-text-cyan" /> Recipe Builder
             </h3>
@@ -361,7 +384,7 @@ export default function RecipeLibrary({
           </aside>
 
           {/* New downside container: Saved & Popular Recipes */}
-          <aside className="flat-panel" style={{ padding: '24px' }}>
+          <aside className="flat-panel recipe-panel-saved" style={{ padding: '24px' }}>
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
               <Star size={18} style={{ color: '#fbbf24' }} fill="#fbbf24" /> Saved & Popular Recipes
             </h3>
