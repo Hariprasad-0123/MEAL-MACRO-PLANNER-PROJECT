@@ -23,6 +23,7 @@ export default function LandingPage() {
   // Theme state synced with localStorage and body [data-theme] attribute
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const [showAlert, setShowAlert] = useState(true);
+  const [redirectingFeature, setRedirectingFeature] = useState(null);
 
   // Authentication check
   const isAuthenticated = localStorage.getItem('mmp_authenticated') === 'true';
@@ -37,13 +38,17 @@ export default function LandingPage() {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
-  const handleFeatureClick = (tabKey) => {
+  const handleFeatureClick = (tabKey, title) => {
     localStorage.setItem('mmp_active_tab', tabKey);
-    if (isAuthenticated) {
-      navigate('/dashboard');
-    } else {
-      navigate('/login');
-    }
+    setRedirectingFeature(title);
+    
+    setTimeout(() => {
+      if (isAuthenticated) {
+        window.location.href = '/dashboard';
+      } else {
+        window.location.href = '/login';
+      }
+    }, 750); // Premium 750ms deep-link launch timing delay
   };
 
   const features = [
@@ -428,7 +433,7 @@ export default function LandingPage() {
               <motion.div
                 key={feat.key}
                 whileHover={{ y: -6, scale: 1.02 }}
-                onClick={() => handleFeatureClick(feat.key)}
+                onClick={() => handleFeatureClick(feat.key, feat.title)}
                 className="flat-panel"
                 style={{
                   background: 'var(--bg-card)',
@@ -556,6 +561,53 @@ export default function LandingPage() {
         <Dumbbell size={14} />
         <span>© {new Date().getFullYear()} MacroPlan. All rights reserved. Premium targets secured.</span>
       </div>
+
+      {/* Premium Full-Screen Deep-Link Redirection Splash Overlay */}
+      {redirectingFeature && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(2, 6, 23, 0.85)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 9999,
+          color: '#ffffff'
+        }}>
+          <div style={{
+            width: '60px',
+            height: '60px',
+            border: '4px solid rgba(0, 242, 254, 0.15)',
+            borderTop: '4px solid var(--accent-cyan)',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            marginBottom: '24px'
+          }} />
+          <h3 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '1.25rem',
+            fontWeight: 800,
+            letterSpacing: '0.02em',
+            marginBottom: '8px',
+            color: '#ffffff'
+          }}>
+            Launching {redirectingFeature}
+          </h3>
+          <p style={{
+            fontSize: '0.85rem',
+            color: 'rgba(255, 255, 255, 0.6)',
+            fontWeight: 500
+          }}>
+            Deep-linking to your secure premium dashboard...
+          </p>
+        </div>
+      )}
 
     </div>
   );
