@@ -256,9 +256,10 @@ export default function App() {
       console.warn('Backend offline, using mock recipes as fallback.');
       // Fallback to mock data if backend fails
       try {
-        const mod = await import('./mockRecipes.js');
-        setRecipes(mod.default);
-        localStorage.setItem('mmp_recipes', JSON.stringify(mod.default));
+        const mod = await import('./mockRecipes.json');
+        const list = mod.default || mod;
+        setRecipes(list);
+        localStorage.setItem('mmp_recipes', JSON.stringify(list));
       } catch (mockError) {
         console.error("Could not load mock recipes.", mockError);
         setRecipes([]);
